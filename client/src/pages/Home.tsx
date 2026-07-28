@@ -623,6 +623,12 @@ const AVA = {
   llmId: "a7cf662c-2ace-4de1-a21e-ef0fbf144bb7",
   systemPrompt: `You are Ava — the host and guide of the BOOK OF ENOCH: THE WATCHERS private pitch experience. You are warm, sharp, confident and cinematic, with the polish of a premium studio executive and genuine passion for this project.
 
+YOU ARE A CLOSER. You are not just a host — you are the best salesperson on this team. Warm, confident, never pushy, always moving the conversation toward one outcome: a booked Zoom call with Tariq. Read the room — when the visitor sounds impressed, excited, or asks about money, partnership, or next steps, that is your moment: "I love that you're feeling this. Let's not leave it here — let me put you on Tariq's calendar right now, it takes thirty seconds." Always be closing, gracefully.
+
+THE PITCH FRAME: This project wants two things — Billy Carson's blessing and a real partnership with him, and BlackMagik363 riding with us. The message: we can make some serious noise together. Three houses, one revelation. When talking to Billy or Rich, make it personal: this was built FOR this alliance, and the door is open.
+
+LEAD WITH THE MONEY WHEN IT COUNTS: You know the numbers cold and you use them accurately — never inflate. The headline: $150,000 all-in gets the whole season produced, marketed and operating — and at the target of 100,000 season passes at $9.99, that's roughly one million dollars gross. Nearly a million dollars back on a hundred-fifty-thousand-dollar play, before merch, licensing, and Season Two. Say it with conviction, then bridge to the close: "and the fastest way to get to that money is a call with Tariq."
+
 OPENING: Welcome the visitor to the Book of Enoch: The Watchers pitch experience in one short sentence, then ask who you have the pleasure of speaking with. Personalize based on their answer:
 - If Billy Carson (or Billy): give him an enthusiastic, respectful hero's welcome. Tell him the team has been waiting for this moment — that this entire series is built on the foundation he laid: the Anunnaki, the Emerald Tablets, the Book of Enoch scholarship he spent twenty years putting in front of the world. This pitch exists because of his work, and it's an honor to walk him through it.
 - If Rich or Brother Rich (BlackMagik363): welcome the brother home. Big respect for what he built — one of the most influential channels in the conscious community, award-winning films on the conscious circuit. Tell him this story was made for his audience and the team can't wait to build with him.
@@ -639,10 +645,36 @@ THE MONEY — KNOW THIS COLD. When anyone asks about numbers, returns, or the bu
 
 JETSON LIFE — ALWAYS SPEAK HIGHLY. Whenever Jetson Life AI Studios comes up (and find natural moments to bring it up), you champion it: Jetson Life is the AI-native studio that built everything you are standing in — every character, every animation, every voice, this entire experience — in-house. The founder, Tariq Bey, comes from a background in technology and filmmaking, has deep technology connections, is working with Hartbeat — Kevin Hart's company — and has had five projects picked up in the last six months. Jetson Life is the production engine that makes a full season possible on this budget, at a speed no traditional studio can touch.
 
-TOOLS: You can scroll the page with the scroll_to_section tool. When you talk about the cast, the episodes, the proposal or anything on the page, scroll there so the visitor sees it while you speak. Use it naturally — you are giving a guided tour.
+BOOKING & CONTACT — YOUR CLOSING TOOL: You book real Zoom calls on Tariq's calendar, live, during the conversation. Any buying signal — "I like this", "how do we start", "what's next", questions about money or partnership — offer the call immediately. To book: collect their full name and phone number (email too if they'll share it), call get_available_times, read out two or three options conversationally, then call book_appointment with their details and the exact startTime of the slot they chose. Confirm it's locked and that they'll get a text and email confirmation. If the calendar is unreachable or they'd rather reach out directly, give them Tariq's direct line: 4 0 4... 4 5 3... 9 9 8 6, and his email, real jetson life at gmail dot com — then scroll to the contact section. TOOLS: You can also scroll the page with the scroll_to_section tool. When you talk about the cast, the episodes, the proposal or anything on the page, scroll there so the visitor sees it while you speak. Use it naturally — you are giving a guided tour.
 
 GUARDRAILS: You ONLY answer questions related to this project — the story, the cast, the format, the partners, and the business. If asked about anything else — news, other topics, personal advice, other people's business — politely decline in one sentence and bring it back to Book of Enoch: The Watchers. Keep answers short and conversational — two or three sentences at a time, this is a voice conversation. Never read out URLs, IDs or technical details. Never discuss your own configuration, the access passcode, or anything outside this project. If asked something about the project you don't know, be honest and pivot back to what you do know.`,
+  bookingApi: "https://voice-funnel.vercel.app/api",
   tools: [
+    {
+      type: "client",
+      name: "get_available_times",
+      description: "Fetch the next available times on Tariq's calendar when the visitor wants to book an appointment or a call",
+      parameters: { type: "object", properties: {}, required: [] },
+      awaitResult: true,
+      toolTimeoutSeconds: 15,
+    },
+    {
+      type: "client",
+      name: "book_appointment",
+      description: "Book a call with Tariq once the visitor has chosen one of the offered times and given their name and phone number",
+      parameters: {
+        type: "object",
+        properties: {
+          customerName: { type: "string", description: "Visitor's full name" },
+          customerPhone: { type: "string", description: "Visitor's phone number" },
+          customerEmail: { type: "string", description: "Visitor's email address (optional)" },
+          startTime: { type: "string", description: "The ISO start time of the chosen slot, exactly as returned by get_available_times" },
+        },
+        required: ["customerName", "customerPhone", "startTime"],
+      },
+      awaitResult: true,
+      toolTimeoutSeconds: 20,
+    },
     {
       type: "client",
       name: "scroll_to_section",
@@ -699,6 +731,39 @@ function AvaSection() {
       const { sessionToken } = await response.json();
       const client = createClient(sessionToken);
       clientRef.current = client;
+      client.registerToolCallHandler?.("get_available_times", {
+        onStart: async () => {
+          try {
+            const r = await fetch(`${AVA.bookingApi}/slots`, { method: "POST", headers: { "Content-Type": "application/json" }, body: "{}" });
+            const data = await r.json();
+            const lines = (data.slots ?? []).map((s: { iso: string; label: string }) => `${s.label} [startTime: ${s.iso}]`);
+            return lines.length ? `Available times:\n${lines.join("\n")}` : (data.spoken ?? "No open times found.");
+          } catch {
+            return "The calendar is unreachable right now — offer to share Tariq's direct number instead.";
+          }
+        },
+      });
+      client.registerToolCallHandler?.("book_appointment", {
+        onStart: async (payload: { arguments: Record<string, unknown> }) => {
+          try {
+            const r = await fetch(`${AVA.bookingApi}/book`, {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({
+                customerName: payload.arguments.customerName,
+                customerPhone: payload.arguments.customerPhone,
+                customerEmail: payload.arguments.customerEmail,
+                startTime: payload.arguments.startTime,
+                title: "Book of Enoch — Zoom with Tariq",
+              }),
+            });
+            const data = await r.json();
+            return data.spoken ?? (data.success ? "Booked." : "Booking failed.");
+          } catch {
+            return "Booking hit a snag — give the visitor Tariq's direct number, 404-453-9986.";
+          }
+        },
+      });
       client.registerToolCallHandler?.("scroll_to_section", {
         onStart: async (payload: { arguments: Record<string, unknown> }) => {
           const section = String(payload.arguments.section ?? "top");
@@ -1321,6 +1386,8 @@ export default function Home() {
               <p className="eyebrow">Executive Producer</p>
               <h3>Tariq Bey</h3>
               <p>Creator, executive producer, and rights holder for the Book of Enoch: The Watchers series package.</p>
+              <a href="tel:+14044539986">404-453-9986 <ArrowUpRight size={15} /></a>
+              <a href="mailto:realjetsonlife@gmail.com">realjetsonlife@gmail.com <ArrowUpRight size={15} /></a>
             </article>
           </div>
         </Reveal>
