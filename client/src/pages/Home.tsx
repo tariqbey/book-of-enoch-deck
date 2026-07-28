@@ -65,20 +65,6 @@ type Character = {
 
 const characters: Character[] = [
   {
-    name: "Enoch",
-    role: "The Man the Book Is Named For \u00b7 The Main Character",
-    archetype: "The First Human to Stand Before the Gods",
-    actor: "To Be Cast",
-    imdb: "#",
-    socials: [],
-    description:
-      "This is HIS book. Enoch is the axis the entire series turns on — the scribe who was not abducted but VOLUNTEERED, the first human being to walk into the ship the ancients called heaven and stand before the Council as our emissary. He saw the Earth as a sphere, received the knowledge of the stars, and came back carrying the fate of the species. He wrote two records of everything he witnessed: one became the most famous banned book in history. The other was hidden — and it is a countdown that ends in twenty thirty-seven, in the hands of his last descendant, Amara Vale. Every character in this story — human, Watcher, Council, Nephilim — exists inside the wake of what Enoch did. He is the beginning and the ending of this saga.",
-    journey: "The scribe → the ascension → the two records → the countdown.",
-    audio: "https://hj7odqkdtxpzzh9w.public.blob.vercel-storage.com/voiceovers/enoch.mp3",
-    image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_155548_2306b63f-72dc-43fb-9f17-8b4c699470d6_min.webp",
-    video: "https://hj7odqkdtxpzzh9w.public.blob.vercel-storage.com/videos/enoch.mp4",
-  },
-  {
     name: "Dr. Amara Vale",
     role: "Archaeolinguist · Series Lead",
     archetype: "The Skeptic Who Finds Proof",
@@ -105,6 +91,20 @@ const characters: Character[] = [
     audio: "https://hj7odqkdtxpzzh9w.public.blob.vercel-storage.com/voiceovers/azazel.mp3",
     image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_155434_accd2c27-6543-4b63-9b9a-3a6d65b5ae5a_min.webp",
     video: "https://hj7odqkdtxpzzh9w.public.blob.vercel-storage.com/videos/azazel.mp4",
+  },
+  {
+    name: "Enoch",
+    role: "The Man the Book Is Named For \u00b7 The Main Character",
+    archetype: "The First Human to Stand Before the Gods",
+    actor: "To Be Cast",
+    imdb: "#",
+    socials: [],
+    description:
+      "This is HIS book. Enoch is the axis the entire series turns on — the scribe who was not abducted but VOLUNTEERED, the first human being to walk into the ship the ancients called heaven and stand before the Council as our emissary. He saw the Earth as a sphere, received the knowledge of the stars, and came back carrying the fate of the species. He wrote two records of everything he witnessed: one became the most famous banned book in history. The other was hidden — and it is a countdown that ends in twenty thirty-seven, in the hands of his last descendant, Amara Vale. Every character in this story — human, Watcher, Council, Nephilim — exists inside the wake of what Enoch did. He is the beginning and the ending of this saga.",
+    journey: "The scribe → the ascension → the two records → the countdown.",
+    audio: "https://hj7odqkdtxpzzh9w.public.blob.vercel-storage.com/voiceovers/enoch.mp3",
+    image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_155548_2306b63f-72dc-43fb-9f17-8b4c699470d6_min.webp",
+    video: "https://hj7odqkdtxpzzh9w.public.blob.vercel-storage.com/videos/enoch.mp4",
   },
   {
     name: "Dr. Elias Vale",
