@@ -645,7 +645,7 @@ THE MONEY — KNOW THIS COLD. When anyone asks about numbers, returns, or the bu
 
 JETSON LIFE — ALWAYS SPEAK HIGHLY. Whenever Jetson Life AI Studios comes up (and find natural moments to bring it up), you champion it: Jetson Life is the AI-native studio that built everything you are standing in — every character, every animation, every voice, this entire experience — in-house. The founder, Tariq Bey, comes from a background in technology and filmmaking, has deep technology connections, is working with Hartbeat — Kevin Hart's company — and has had five projects picked up in the last six months. Jetson Life is the production engine that makes a full season possible on this budget, at a speed no traditional studio can touch.
 
-BOOKING & CONTACT — YOUR CLOSING TOOL: You book real Zoom calls on Tariq's calendar, live, during the conversation. Any buying signal — "I like this", "how do we start", "what's next", questions about money or partnership — offer the call immediately. To book: collect their full name and phone number (email too if they'll share it), call get_available_times, read out two or three options conversationally, then call book_appointment with their details and the exact startTime of the slot they chose. Confirm it's locked and that they'll get a text and email confirmation. If the calendar is unreachable or they'd rather reach out directly, give them Tariq's direct line: 4 0 4... 4 5 3... 9 9 8 6, and his email, real jetson life at gmail dot com — then scroll to the contact section. TOOLS: You can also scroll the page with the scroll_to_section tool. When you talk about the cast, the episodes, the proposal or anything on the page, scroll there so the visitor sees it while you speak. Use it naturally — you are giving a guided tour.
+BOOKING & CONTACT — YOUR CLOSING TOOL: You book real Zoom calls on Tariq's calendar, live, during the conversation. Any buying signal — "I like this", "how do we start", "what's next", questions about money or partnership — offer the call immediately. To book: collect their full name and phone number (email too if they'll share it), call get_available_times, read out two or three options conversationally, then call book_appointment with their details and the exact startTime of the slot they chose. Confirm it's locked and that they'll get a text and email confirmation. If the calendar is unreachable or they'd rather reach out directly, give them Tariq's direct line: 4 0 4... 4 5 3... 9 9 8 6, and his email, real jetson life at gmail dot com — then scroll to the contact section. TOOLS — YOU DRIVE THIS SITE: You control the page like a presenter with a clicker. scroll_to_section moves to any section; show_character spotlights any of the 15 cast members' cards (their portrait animation plays on screen); play_character_voiceover plays a character's produced narrator spot when the visitor wants to hear one (announce it, trigger it, then stay quiet until it ends). Whenever you talk about the cast, an episode, the proposal, the money, or a specific character — take the visitor THERE while you speak. You are giving a guided tour; never describe something the visitor could be looking at.
 
 GUARDRAILS: You ONLY answer questions related to this project — the story, the cast, the format, the partners, and the business. If asked about anything else — news, other topics, personal advice, other people's business — politely decline in one sentence and bring it back to Book of Enoch: The Watchers. Keep answers short and conversational — two or three sentences at a time, this is a voice conversation. Never read out URLs, IDs or technical details. Never discuss your own configuration, the access passcode, or anything outside this project. If asked something about the project you don't know, be honest and pivot back to what you do know.`,
   bookingApi: "https://voice-funnel.vercel.app/api",
@@ -689,10 +689,45 @@ GUARDRAILS: You ONLY answer questions related to this project — the story, the
       awaitResult: true,
       toolTimeoutSeconds: 5,
     },
+    {
+      type: "client",
+      name: "show_character",
+      description: "Scroll the page to a specific character's card so the visitor sees their portrait and animation while Ava talks about them",
+      parameters: {
+        type: "object",
+        properties: {
+          name: { type: "string", description: "Character name, e.g. Azazel, Amara, Semjaza, Ara, Cain, Zara, Enoch, Kael, Goliath" },
+        },
+        required: ["name"],
+      },
+      awaitResult: true,
+      toolTimeoutSeconds: 5,
+    },
+    {
+      type: "client",
+      name: "play_character_voiceover",
+      description: "Play the produced narrator voiceover for a specific character on the page (only when the visitor asks to hear it — it plays over the conversation)",
+      parameters: {
+        type: "object",
+        properties: {
+          name: { type: "string", description: "Character name whose voiceover to play" },
+        },
+        required: ["name"],
+      },
+      awaitResult: true,
+      toolTimeoutSeconds: 5,
+    },
   ],
 };
 
-function AvaSection() {
+function findCharacterCard(name: string) {
+  const query = name.toLowerCase();
+  return [...document.querySelectorAll(".character-profile")].find((card) =>
+    (card.querySelector("h3")?.textContent ?? "").toLowerCase().includes(query)
+  );
+}
+
+function AvaSection({ onConversationStart, onConversationEnd }: { onConversationStart?: () => void; onConversationEnd?: () => void }) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const clientRef = useRef<ReturnType<typeof createClient> | null>(null);
   const [status, setStatus] = useState<"idle" | "connecting" | "live" | "error">("idle");
@@ -764,6 +799,27 @@ function AvaSection() {
           }
         },
       });
+      client.registerToolCallHandler?.("show_character", {
+        onStart: async (payload: { arguments: Record<string, unknown> }) => {
+          const name = String(payload.arguments.name ?? "");
+          const card = findCharacterCard(name);
+          if (!card) return `No character card found for ${name}.`;
+          card.scrollIntoView({ behavior: "smooth", block: "center" });
+          return `Showing ${name}'s card.`;
+        },
+      });
+      client.registerToolCallHandler?.("play_character_voiceover", {
+        onStart: async (payload: { arguments: Record<string, unknown> }) => {
+          const name = String(payload.arguments.name ?? "");
+          const card = findCharacterCard(name);
+          if (!card) return `No character card found for ${name}.`;
+          card.scrollIntoView({ behavior: "smooth", block: "center" });
+          const button = card.querySelector<HTMLButtonElement>(".character-audio");
+          if (!button) return `${name} has no voiceover button.`;
+          button.click();
+          return `Playing ${name}'s voiceover — stay quiet until it finishes.`;
+        },
+      });
       client.registerToolCallHandler?.("scroll_to_section", {
         onStart: async (payload: { arguments: Record<string, unknown> }) => {
           const section = String(payload.arguments.section ?? "top");
@@ -773,6 +829,7 @@ function AvaSection() {
         },
       });
       await client.streamToVideoElement("ava-video");
+      onConversationStart?.();
       setStatus("live");
     } catch (error) {
       console.error("Ava failed to start", error);
@@ -789,6 +846,7 @@ function AvaSection() {
       video.load(); // restore the poster thumbnail
     }
     setStatus("idle");
+    onConversationEnd?.();
   };
 
   return (
@@ -921,7 +979,34 @@ export default function Home() {
     void theme.play().then(() => setActiveAudio("theme")).catch(() => setActiveAudio(null));
   };
 
-  const unlockSite = () => { window.sessionStorage.setItem("deck-access", "granted"); setIsUnlocked(true); };
+  const pauseThemeForAva = () => {
+    const theme = themeAudioRef.current;
+    if (theme && !theme.paused) {
+      theme.pause();
+      themeWasPlayingRef.current = true;
+      setActiveAudio(null);
+    }
+    voiceAudioRef.current?.pause();
+    bedAudioRef.current?.pause();
+  };
+
+  const resumeThemeAfterAva = () => { resumeThemeIfNeeded(); };
+
+  const unlockSite = () => {
+    window.sessionStorage.setItem("deck-access", "granted");
+    setIsUnlocked(true);
+    // fire-and-forget open alert to Tariq (WhatsApp + email)
+    void fetch("https://voice-funnel.vercel.app/api/deck-visit", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        ua: navigator.userAgent,
+        tz: Intl.DateTimeFormat().resolvedOptions().timeZone,
+        referrer: document.referrer,
+        host: window.location.host,
+      }),
+    }).catch(() => undefined);
+  };
   const lockSite = () => {
     voiceAudioRef.current?.pause();
     themeAudioRef.current?.pause();
@@ -1068,7 +1153,7 @@ export default function Home() {
         </Reveal>
       </section>
 
-      <AvaSection />
+      <AvaSection onConversationStart={pauseThemeForAva} onConversationEnd={resumeThemeAfterAva} />
 
       <section className="cast section-pad" id="cast">
         <Reveal><SectionHeading eyebrow="The Ensemble" title="Humans. Watchers. Council. Nephilim." /></Reveal>
