@@ -831,9 +831,8 @@ function AvaSection({ onConversationStart, onConversationEnd }: { onConversation
       client.registerToolCallHandler?.("scroll_to_section", {
         onStart: async (payload: { arguments: Record<string, unknown> }) => {
           const section = String(payload.arguments.section ?? "top");
-          const subTargets = ["partners", "why-billy", "money-numbers", "revenue-model"];
           const target = section === "top" ? document.body : document.getElementById(section);
-          (target ?? document.body).scrollIntoView({ behavior: "smooth", block: subTargets.includes(section) ? "center" : "start" });
+          (target ?? document.body).scrollIntoView({ behavior: "smooth", block: "start" });
           return `Scrolled to ${section}`;
         },
       });
