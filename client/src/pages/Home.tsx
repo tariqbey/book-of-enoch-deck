@@ -673,21 +673,31 @@ function AvaSection() {
     if (status === "connecting" || status === "live") return;
     setStatus("connecting");
     try {
-      const response = await fetch("https://api.anam.ai/v1/auth/session-token", {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Authorization: `Bearer ${AVA.apiKey}` },
-        body: JSON.stringify({
-          personaConfig: {
-            name: "Ava",
-            avatarId: AVA.avatarId,
-            avatarModel: AVA.avatarModel,
-            voiceId: AVA.voiceId,
-            llmId: AVA.llmId,
-            systemPrompt: AVA.systemPrompt,
-            tools: AVA.tools,
-          },
-        }),
+      const tokenBody = JSON.stringify({
+        personaConfig: {
+          name: "Ava",
+          avatarId: AVA.avatarId,
+          avatarModel: AVA.avatarModel,
+          voiceId: AVA.voiceId,
+          llmId: AVA.llmId,
+          systemPrompt: AVA.systemPrompt,
+          tools: AVA.tools,
+        },
       });
+      // Prefer the serverless endpoint (Vercel) so the API key stays server-side;
+      // fall back to the direct call on static hosting (GitHub Pages).
+      let response = await fetch("/api/anam-token", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: tokenBody,
+      }).catch(() => null);
+      if (!response || !response.ok) {
+        response = await fetch("https://api.anam.ai/v1/auth/session-token", {
+          method: "POST",
+          headers: { "Content-Type": "application/json", Authorization: `Bearer ${AVA.apiKey}` },
+          body: tokenBody,
+        });
+      }
       if (!response.ok) throw new Error(`session token ${response.status}`);
       const { sessionToken } = await response.json();
       const client = createClient(sessionToken);
@@ -720,7 +730,7 @@ function AvaSection() {
         <SectionHeading eyebrow="Meet Your Host" title="Talk to Ava" />
         <p className="lede ava-lede">The world&apos;s first interactive AI pitch host. Ava knows every frame of this project — the mythology, the cast, the numbers. Ask her anything, and she&apos;ll walk you through the site while she answers. Out loud. In real time.</p>
         <div className="ava-stage">
-          <video id="ava-video" ref={videoRef} autoPlay playsInline className={`ava-video ${status === "live" ? "is-live" : ""}`} />
+          <video id="ava-video" ref={videoRef} autoPlay playsInline poster={`${import.meta.env.BASE_URL}ava-poster.webp`} className={`ava-video ${status === "live" ? "is-live" : ""}`} />
           {status !== "live" && (
             <div className="ava-overlay">
               {status === "error" ? (
