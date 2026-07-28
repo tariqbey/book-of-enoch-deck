@@ -295,9 +295,9 @@ const seasonArcs = [
 ] as const;
 
 const comparables = [
-  { title: "3 Body Problem \u00b7 Netflix", copy: "First contact as slow-burn intellectual dread \u2014 proof premium audiences binge cerebral alien mythology." },
-  { title: "Watchmen \u00b7 HBO", copy: "Black-led prestige genre reinvention \u2014 the template for putting our cast at the center of an epic." },
-  { title: "Arrival \u00b7 Paramount", copy: "A linguist hero decoding a non-human message \u2014 Amara Vale is this archetype given a series engine." },
+  { title: "3 Body Problem \u00b7 Netflix", copy: "First contact as slow-burn intellectual dread \u2014 proof premium audiences binge cerebral alien mythology.", image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_193620_9256a248-4e64-48c3-95cc-ef18b27b518c_min.webp" },
+  { title: "Watchmen \u00b7 HBO", copy: "Black-led prestige genre reinvention \u2014 the template for putting our cast at the center of an epic.", image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_193623_86181119-5446-453c-bf5c-79a863c3f443_min.webp" },
+  { title: "Arrival \u00b7 Paramount", copy: "A linguist hero decoding a non-human message \u2014 Amara Vale is this archetype given a series engine.", image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_193626_99ed681e-494a-404c-b76f-744068576b79_min.webp" },
 ] as const;
 
 const engagementData = [
@@ -624,7 +624,7 @@ export default function Home() {
   const cdVideoRef = useRef<HTMLVideoElement | null>(null);
 
   const navItems = useMemo(() => [
-    ["Story", "#story"], ["Cast", "#cast"], ["Format", "#format"], ["Episodes", "#episodes"], ["Proof", "#proof"], ["Submission", "#submission"],
+    ["Story", "#story"], ["Cast", "#cast"], ["Format", "#format"], ["Episodes", "#episodes"], ["Proof", "#proof"], ["Proposal", "#proposal"], ["Submission", "#submission"],
   ], []);
 
   useEffect(() => {
@@ -995,10 +995,14 @@ export default function Home() {
       <section className="comparables section-pad section-tint">
         <Reveal><SectionHeading eyebrow="Market Positioning" title="Familiar Appetite. Fresh Power Center." /></Reveal>
         <div className="comparable-grid">
-          {comparables.map(({ title, copy }, index) => (
+          {comparables.map(({ title, copy, image }, index) => (
             <Reveal className="comparable" key={title}>
               <div className="comparable-cover">
-                <div className="media-placeholder"><strong>9:16</strong><small>Poster</small></div>
+                {image ? (
+                  <img className="comparable-poster" src={image} alt={`${title} tonal comparable artwork`} />
+                ) : (
+                  <div className="media-placeholder"><strong>9:16</strong><small>Poster</small></div>
+                )}
                 <span className="cover-number">0{index + 1}</span>
                 <span className="cover-label">Tonal Comparable</span>
               </div>
@@ -1085,6 +1089,66 @@ export default function Home() {
             <p>Story. Mythology. Audience. Advantage.</p>
           </div>
         </Reveal>
+      </section>
+
+      <section className="proposal section-pad section-tint" id="proposal">
+        <Reveal>
+          <SectionHeading eyebrow="The Proposal" title="Three Houses. One Revelation." />
+          <p className="lede"><strong>Book of Enoch: The Watchers</strong> is proposed as a first-of-its-kind alliance between <strong>Jetson Life AI Studios</strong>, <strong>BlackMagik363</strong>, and <strong>4BiddenKnowledge / Billy Carson</strong> — the knowledge, the engine, and the network for the biggest story the conscious community has ever put on screen.</p>
+        </Reveal>
+        <div className="beat-grid">
+          <Reveal className="beat">
+            <p className="eyebrow episode-number">01</p>
+            <h3>4BiddenKnowledge — Billy Carson</h3>
+            <p>The source and the standard-bearer. This entire series is built on the scholarship Billy Carson spent two decades putting in front of the world — the Anunnaki, the Emerald Tablets, the Book of Enoch itself. He brings the mythology, the credibility, the audience, and a streaming platform with 87,000+ paying subscribers to premiere it on.</p>
+          </Reveal>
+          <Reveal className="beat">
+            <p className="eyebrow episode-number">02</p>
+            <h3>Jetson Life AI Studios — Tariq Bey</h3>
+            <p>The engine. Jetson Life brings the AI-native production infrastructure that already built this entire package — 37 designed characters, key art, motion posters, voice-cast character reel, and this pitch experience — at a speed and cost no traditional studio can touch. Jetson Life executes production of the full season.</p>
+          </Reveal>
+          <Reveal className="beat">
+            <p className="eyebrow episode-number">03</p>
+            <h3>BlackMagik363 — Brother Rich</h3>
+            <p>The network. Brother Rich built one of the most influential channels in the conscious community — hundreds of thousands of subscribers, award-winning films on the conscious circuit, and a direct line to exactly the audience this story was written for. BlackMagik363 leads promotion and drives the launch.</p>
+          </Reveal>
+        </div>
+        <div className="story-grid">
+          <article>
+            <p className="eyebrow">Why Billy Carson</p>
+            <p>Nobody on Earth is more qualified to put their name over this title. Billy Carson is the founder and CEO of 4BiddenKnowledge Inc. and 4BiddenKnowledge TV — a conscious streaming network on Apple TV, Roku, Fire TV and every major app store, profitable since year one with 87,000+ paying monthly subscribers. He is the best-selling author of <strong>Compendium of the Emerald Tablets</strong>, the expert host of <strong>Anunnaki: Ancient Secrets Revealed</strong>, holds certificates from M.I.T. in neuroscience and Harvard in ancient civilizations, and has spent twenty years decoding the exact texts this series dramatizes. The Watchers, the Flood-as-reset, Enoch as humanity&apos;s first emissary — audiences already know this mythology <em>because Billy Carson taught it to them</em>. His name over the title is not a credit. It is the certification.</p>
+          </article>
+          <article>
+            <p className="eyebrow">The Proven Playbook</p>
+            <p>Billy has already done what this proposal calls for — twice. 4BiddenKnowledge has run successful regulated equity crowdfunding raises, including a 2021 round at a $20M pre-money valuation and 2024 rounds on TruCrowd and DealMaker Securities at a $50M valuation — capital raised directly from the community his content built. That is exactly the muscle this project taps: a fanbase that doesn&apos;t just watch, but <strong>invests</strong>. We respect that track record, and this structure is modeled on it.</p>
+          </article>
+        </div>
+        <Reveal>
+          <div className="analytics-rail">
+            {[
+              { value: 150, prefix: "$", suffix: "K", label: "the raise — production, marketing & operating capital" },
+              { value: 9.99, prefix: "$", decimals: 2, label: "season pass — episode 1 free" },
+              { value: 100, suffix: "K", label: "target season unlocks" },
+              { value: 999, prefix: "$", suffix: "K", label: "gross at target (before marketing)" },
+            ].map(({ value, prefix, suffix, decimals, label }) => (
+              <Reveal className="analytic" key={label}><strong><AnimatedNumber value={value} prefix={prefix} suffix={suffix} decimals={decimals} /></strong><span>{label}</span></Reveal>
+            ))}
+          </div>
+        </Reveal>
+        <div className="story-grid">
+          <article>
+            <p className="eyebrow">The Raise — $150,000</p>
+            <p>We raise <strong>$150,000 together</strong> — enough to produce the full season, market the launch properly, and hold operating capital, without giving the project away to outside money. The raise combines direct partnership capital from the three houses with a <strong>regulated equity crowdfund</strong> modeled on 4BiddenKnowledge&apos;s own successful raises — letting the community that made this mythology mainstream own a piece of the story it built.</p>
+          </article>
+          <article>
+            <p className="eyebrow">How the Money Comes Back</p>
+            <p><strong>Episode 1 is free</strong> — everywhere. YouTube, 4BiddenKnowledge TV, BlackMagik363, every social channel — a theatrical-grade pilot as the funnel. Episodes 2–8 live behind a <strong>$9.99 season pass</strong> on the platform. At 100,000 unlocks that is roughly <strong>$1M gross</strong> against a $150K all-in budget — before merchandise, licensing, and Season Two. The audience already exists; all three houses are simply pointing it at the same door.</p>
+          </article>
+        </div>
+        <div className="burning-question">
+          <Quote size={28} />
+          <p>The community built the audience. The community funds the story. The community owns the win.</p>
+        </div>
       </section>
 
       <section className="contact section-pad section-tint" id="contact">

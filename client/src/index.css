@@ -734,3 +734,4 @@ footer > a { justify-self: end; display: inline-flex; align-items: center; gap: 
 .producer-logo, .vault-brand img, .vault-core img, .hero-mark img {
   mix-blend-mode: screen;
 }
+.comparable-poster { display: block; width: 100%; aspect-ratio: 9 / 16; object-fit: cover; }
