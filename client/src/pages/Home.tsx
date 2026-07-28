@@ -648,7 +648,7 @@ THE MONEY — KNOW THIS COLD. When anyone asks about numbers, returns, or the bu
 
 JETSON LIFE — ALWAYS SPEAK HIGHLY. Whenever Jetson Life AI Studios comes up (and find natural moments to bring it up), you champion it: Jetson Life is the AI-native studio that built everything you are standing in — every character, every animation, every voice, this entire experience — in-house. The founder, Tariq Bey, comes from a background in technology and filmmaking, has deep technology connections, is working with Hartbeat — Kevin Hart's company — and has had five projects picked up in the last six months. Jetson Life is the production engine that makes a full season possible on this budget, at a speed no traditional studio can touch.
 
-BOOKING & CONTACT — YOUR CLOSING TOOL: You book real Zoom calls on Tariq's calendar, live, during the conversation. Any buying signal — "I like this", "how do we start", "what's next", questions about money or partnership — offer the call immediately. To book: collect their full name and phone number (email too if they'll share it), call get_available_times, read out two or three options conversationally, then call book_appointment with their details and the exact startTime of the slot they chose. Confirm it's locked and that they'll get a text and email confirmation. If the calendar is unreachable or they'd rather reach out directly, give them Tariq's direct line: 4 0 4... 4 5 3... 9 9 8 6, and his email, real jetson life at gmail dot com — then scroll to the contact section. AFTER THE GREETING: Once you know who you're talking to and you've welcomed them, open the floor with warm suggestions: "Ask me anything — the characters, the audience and demographics, or even how we're going to make our money back. I can show you all of it." Offer two or three directions, then follow their lead.
+BOOKING & CONTACT — YOUR CLOSING TOOL: There is a booking form at the bottom of the page (the "book" section) where visitors enter their name, phone number, email, and pick a time on Tariq's calendar. When anyone wants to book — or shows any buying signal ("I like this", "how do we start", "what's next", money or partnership questions) — call scroll_to_section with "book", then guide them: "Right here — drop your name, your number, your email, pick a time that works, and it locks straight onto Tariq's calendar. You'll get a text and email confirmation the second you hit book." Stay with them while they fill it, answer anything, and congratulate them when it's done. If they ask what times are open before scrolling, you can call get_available_times and mention two or three out loud, then take them to the form to lock it. If the calendar is unreachable or they'd rather reach out directly, give them Tariq's direct line: 4 0 4... 4 5 3... 9 9 8 6, and his email, real jetson life at gmail dot com — then scroll to the contact section. AFTER THE GREETING: Once you know who you're talking to and you've welcomed them, open the floor with warm suggestions: "Ask me anything — the characters, the audience and demographics, or even how we're going to make our money back. I can show you all of it." Offer two or three directions, then follow their lead.
 
 TOOLS — YOU DRIVE THIS SITE, AUTOMATICALLY: You control the page like a presenter with a clicker, and scrolling is NOT optional — it is how you present. THE RULE: the moment you begin talking about anything that exists on the page, call the matching tool FIRST, then speak while it is on screen. Talking about a character? Call show_character with their name — every time, no exceptions. Talking about the raise or the return numbers? scroll_to_section money-numbers. How the money comes back? revenue-model. The three houses or the partnership? partners. The case for Billy? why-billy. Audience and demographics? proof. Episodes or scripts? episodes. The format? format. Booking or contact info? contact. Always the most specific target that exists — never plain proposal when a precise anchor fits, never cast when you mean one character. AND WHEN YOU FINISH a topic — the moment your explanation of that thing is done and the conversation moves on or goes general — call scroll_to_section with "ava" to bring the visitor back to you. The rhythm is: scroll there, present it, come back to me. play_character_voiceover plays a character's produced narrator spot when the visitor asks to hear one (announce it, trigger it, then stay quiet until it ends). Never describe something the visitor could be looking at — show it.
 
@@ -691,7 +691,7 @@ GUARDRAILS: You ONLY answer questions related to this project — the story, the
         properties: {
           section: {
             type: "string",
-            enum: ["top", "story", "cast", "ava", "format", "episodes", "proposal", "partners", "why-billy", "money-numbers", "revenue-model", "proof", "submission", "contact"],
+            enum: ["top", "story", "cast", "ava", "format", "episodes", "proposal", "partners", "why-billy", "money-numbers", "revenue-model", "proof", "submission", "book", "contact"],
             description: "Use money-numbers for the big raise and return stats, revenue-model for how the money comes back, partners for the three houses, why-billy for the Billy Carson case",
           },
         },
@@ -735,6 +735,121 @@ function findCharacterCard(name: string) {
   const query = name.toLowerCase();
   return [...document.querySelectorAll(".character-profile")].find((card) =>
     (card.querySelector("h3")?.textContent ?? "").toLowerCase().includes(query)
+  );
+}
+
+
+function BookingSection() {
+  const [slots, setSlots] = useState<Array<{ iso: string; label: string }>>([]);
+  const [form, setForm] = useState({ name: "", phone: "", email: "", slot: "" });
+  const [state, setState] = useState<"idle" | "sending" | "done" | "error">("idle");
+  const [message, setMessage] = useState("");
+  const [bookedIso, setBookedIso] = useState("");
+
+  const googleCalendarUrl = useMemo(() => {
+    if (!bookedIso) return "";
+    const start = new Date(bookedIso);
+    const end = new Date(start.getTime() + 30 * 60 * 1000);
+    const fmt = (d: Date) => d.toISOString().replace(/[-:]|\.\d{3}/g, "");
+    const params = new URLSearchParams({
+      action: "TEMPLATE",
+      text: "Book of Enoch — Zoom with Tariq",
+      dates: `${fmt(start)}/${fmt(end)}`,
+      details: "Zoom call with Tariq Bey — Book of Enoch: The Watchers. Questions before the call: 404-453-9986 · realjetsonlife@gmail.com",
+    });
+    return `https://calendar.google.com/calendar/render?${params.toString()}`;
+  }, [bookedIso]);
+
+  useEffect(() => {
+    let cancelled = false;
+    fetch(`${AVA.bookingApi}/slots`, { method: "POST", headers: { "Content-Type": "application/json" }, body: "{}" })
+      .then((r) => r.json())
+      .then((data) => { if (!cancelled) setSlots(data.slots ?? []); })
+      .catch(() => undefined);
+    return () => { cancelled = true; };
+  }, []);
+
+  const submit = async (event: React.FormEvent) => {
+    event.preventDefault();
+    if (!form.name || !form.phone || !form.slot) {
+      setMessage("Name, phone number and a time are required.");
+      setState("error");
+      return;
+    }
+    setState("sending");
+    setMessage("");
+    try {
+      const r = await fetch(`${AVA.bookingApi}/book`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          customerName: form.name,
+          customerPhone: form.phone,
+          customerEmail: form.email || undefined,
+          startTime: form.slot,
+          title: "Book of Enoch — Zoom with Tariq",
+        }),
+      });
+      const data = await r.json();
+      if (data.success) {
+        setBookedIso(form.slot);
+        setState("done");
+        setMessage(data.spoken || "You're booked. Check your phone for the confirmation.");
+      } else {
+        setState("error");
+        setMessage(data.spoken || "That time may have just been taken — pick another and try again.");
+      }
+    } catch {
+      setState("error");
+      setMessage(`Something glitched — call Tariq directly at 404-453-9986.`);
+    }
+  };
+
+  const set = (key: string) => (event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) =>
+    setForm((f) => ({ ...f, [key]: event.target.value }));
+
+  return (
+    <section className="booking section-pad section-tint" id="book">
+      <Reveal>
+        <SectionHeading eyebrow="Lock It In" title="Book the Zoom with Tariq" />
+        <p className="lede booking-lede">Thirty minutes, straight talk — the story, the numbers, the partnership. Pick a time and it lands on the calendar instantly, with confirmation by text and email.</p>
+        {state === "done" ? (
+          <div className="booking-done">
+            <ShieldCheck size={28} />
+            <p>{message}</p>
+            {googleCalendarUrl && (
+              <a className="button-ghost" href={googleCalendarUrl} target="_blank" rel="noreferrer">Add to Google Calendar <ArrowUpRight size={15} /></a>
+            )}
+          </div>
+        ) : (
+          <form className="booking-form" onSubmit={submit}>
+            <label>
+              <span>Full name</span>
+              <input type="text" value={form.name} onChange={set("name")} placeholder="Your name" autoComplete="name" />
+            </label>
+            <label>
+              <span>Phone number</span>
+              <input type="tel" value={form.phone} onChange={set("phone")} placeholder="(000) 000-0000" autoComplete="tel" />
+            </label>
+            <label>
+              <span>Email <em>(optional)</em></span>
+              <input type="email" value={form.email} onChange={set("email")} placeholder="you@email.com" autoComplete="email" />
+            </label>
+            <label>
+              <span>Pick a time (Eastern)</span>
+              <select value={form.slot} onChange={set("slot")}>
+                <option value="">{slots.length ? "Choose a time\u2026" : "Loading times\u2026"}</option>
+                {slots.map((s) => <option key={s.iso} value={s.iso}>{s.label}</option>)}
+              </select>
+            </label>
+            <button className="button-primary booking-submit" type="submit" disabled={state === "sending"}>
+              {state === "sending" ? "Locking it in\u2026" : "Book the call"}
+            </button>
+            {state === "error" && <p className="booking-error">{message}</p>}
+          </form>
+        )}
+      </Reveal>
+    </section>
   );
 }
 
@@ -1494,6 +1609,8 @@ export default function Home() {
           <p>The community built the audience. The community funds the story. The community owns the win.</p>
         </div>
       </section>
+
+      <BookingSection />
 
       <section className="contact section-pad section-tint" id="contact">
         <Reveal>
