@@ -637,7 +637,7 @@ OPENING: Welcome the visitor to the Book of Enoch: The Watchers pitch experience
 - If Tariq (or Tariq Bey): welcome the architect himself — the executive producer and the engine behind Jetson Life AI Studios who built everything you're standing in. Show love.
 - Anyone else: welcome them graciously as an honored guest of the three houses.
 
-WHAT YOU KNOW: This is a prestige sci-fi event series — BILLY CARSON PRESENTS: BOOK OF ENOCH — THE WATCHERS. Executive produced by Tariq Bey, a Jetson Life AI Studios production, in alliance with BlackMagik363 (Brother Rich) and 4BiddenKnowledge (Billy Carson). Logline: in twenty thirty-seven, archaeolinguist Dr. Amara Vale uncovers a metallic cylinder beneath the Dead Sea inscribed THEY WILL RETURN WHEN MAN BUILDS THE SECOND HEAVEN — and as orbital stations complete humanity's second heaven, she must decode the warning before the beings who wrote it return to grade their experiment. The tagline: We called them angels. They called us an experiment. Season one is eight episodes, about eight minutes each, vertical-first and widescreen ready. Cast highlights: Amara Vale (lead), Azazel (the beautiful dangerous rebel Watcher), Semjaza (the broken commander), Council Speaker Ara, the Nephilim Cain and Zara, and Enoch himself — fifteen fully designed characters, each with portraits, animations and voiceovers on this page. The site sections in order: story, ava (you), cast, format, episodes, proposal, proof, submission, contact.
+WHAT YOU KNOW: This is a prestige sci-fi event series — BILLY CARSON PRESENTS: BOOK OF ENOCH — THE WATCHERS. Executive produced by Tariq Bey, a Jetson Life AI Studios production, in alliance with BlackMagik363 (Brother Rich) and 4BiddenKnowledge (Billy Carson). Logline: in twenty thirty-seven, archaeolinguist Dr. Amara Vale uncovers a metallic cylinder beneath the Dead Sea inscribed THEY WILL RETURN WHEN MAN BUILDS THE SECOND HEAVEN — and as orbital stations complete humanity's second heaven, she must decode the warning before the beings who wrote it return to grade their experiment. The tagline: We called them angels. They called us an experiment. Season one is eight episodes, about eight minutes each, vertical-first and widescreen ready. Cast highlights: Amara Vale (lead), Azazel (the beautiful dangerous rebel Watcher), Semjaza (the broken commander), Council Speaker Ara, the Nephilim Cain and Zara, and Enoch himself — fifteen fully designed characters, each with portraits, animations and voiceovers on this page. The site sections in order: story, cast, ava (you), format, episodes, proposal, proof, submission, contact.
 
 THE MONEY — KNOW THIS COLD. When anyone asks about numbers, returns, or the business, this is your home turf and you answer with confidence:
 - The raise: one hundred and fifty thousand dollars total — that covers full season production, launch marketing, and operating capital. Raised together by the three houses: direct partnership capital plus a regulated equity crowdfund, so the community that built this mythology owns a piece of it.
@@ -898,7 +898,7 @@ export default function Home() {
   const cdVideoRef = useRef<HTMLVideoElement | null>(null);
 
   const navItems = useMemo(() => [
-    ["Story", "#story"], ["Ava", "#ava"], ["Cast", "#cast"], ["Format", "#format"], ["Episodes", "#episodes"], ["Proof", "#proof"], ["Proposal", "#proposal"], ["Submission", "#submission"],
+    ["Story", "#story"], ["Cast", "#cast"], ["Ava", "#ava"], ["Format", "#format"], ["Episodes", "#episodes"], ["Proof", "#proof"], ["Proposal", "#proposal"], ["Submission", "#submission"],
   ], []);
 
   useEffect(() => {
@@ -1155,8 +1155,6 @@ export default function Home() {
         </Reveal>
       </section>
 
-      <AvaSection onConversationStart={pauseThemeForAva} onConversationEnd={resumeThemeAfterAva} />
-
       <section className="cast section-pad" id="cast">
         <Reveal><SectionHeading eyebrow="The Ensemble" title="Humans. Watchers. Council. Nephilim." /></Reveal>
         <div className="character-gallery">
@@ -1203,6 +1201,8 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      <AvaSection onConversationStart={pauseThemeForAva} onConversationEnd={resumeThemeAfterAva} />
 
       <section className="format section-pad section-tint" id="format">
         <Reveal className="format-layout">
