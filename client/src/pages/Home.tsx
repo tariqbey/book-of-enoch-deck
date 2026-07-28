@@ -757,25 +757,27 @@ export default function Home() {
         {MEDIA.themeSong && (
           <div className={`theme-player ${activeAudio === "theme" ? "is-playing" : ""}`}>
             <div className="theme-player-copy">
-              {MEDIA.cdVideo && (
-                <video
-                  ref={cdVideoRef}
-                  className={`theme-cd ${activeAudio === "theme" ? "is-spinning" : ""}`}
-                  src={MEDIA.cdVideo}
-                  muted
-                  loop
-                  playsInline
-                  preload="metadata"
-                  aria-label="Book of Enoch theme disc"
-                />
-              )}
               <p className="eyebrow">Original Theme Song</p>
               <h2>{DECK.brand}</h2>
-              <button className="theme-song-button" type="button" onClick={toggleThemeSong}>
-                <span className="theme-play-icon">{activeAudio === "theme" ? <Pause size={18} /> : <Play size={18} fill="currentColor" />}</span>
-                <span>{activeAudio === "theme" ? "Pause theme song" : "Play theme song"}</span>
-                <i aria-hidden="true"><b /><b /><b /><b /><b /></i>
-              </button>
+              <div className={`theme-cd-stage ${activeAudio === "theme" ? "is-live" : ""}`}>
+                {MEDIA.cdVideo && (
+                  <video
+                    ref={cdVideoRef}
+                    className={`theme-cd ${activeAudio === "theme" ? "is-spinning" : ""}`}
+                    src={MEDIA.cdVideo}
+                    muted
+                    loop
+                    playsInline
+                    preload="metadata"
+                    aria-label="Book of Enoch theme disc"
+                  />
+                )}
+                <button className={`theme-song-button ${activeAudio === "theme" ? "on-cd" : ""}`} type="button" onClick={toggleThemeSong}>
+                  <span className="theme-play-icon">{activeAudio === "theme" ? <Pause size={18} /> : <Play size={18} fill="currentColor" />}</span>
+                  <span>{activeAudio === "theme" ? "Pause theme song" : "Play theme song"}</span>
+                  <i aria-hidden="true"><b /><b /><b /><b /><b /></i>
+                </button>
+              </div>
             </div>
           </div>
         )}
