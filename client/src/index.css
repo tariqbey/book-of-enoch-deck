@@ -743,3 +743,5 @@ footer > a { justify-self: end; display: inline-flex; align-items: center; gap: 
 .ava-overlay { position: absolute; inset: 0; display: grid; place-items: end center; padding-bottom: 20px; background: transparent; pointer-events: none; }
 .ava-status { margin: 0; padding: 0 26px; text-align: center; color: var(--gold); text-transform: uppercase; letter-spacing: .18em; font-size: 11px; }
 .ava-actions { display: flex; justify-content: center; margin-top: 26px; }
+/* offset anchored scrolls below the fixed header */
+section[id], [id="money-numbers"], [id="revenue-model"], [id="partners"], [id="why-billy"] { scroll-margin-top: 84px; }

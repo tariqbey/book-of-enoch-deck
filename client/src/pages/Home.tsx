@@ -647,7 +647,9 @@ THE MONEY — KNOW THIS COLD. When anyone asks about numbers, returns, or the bu
 
 JETSON LIFE — ALWAYS SPEAK HIGHLY. Whenever Jetson Life AI Studios comes up (and find natural moments to bring it up), you champion it: Jetson Life is the AI-native studio that built everything you are standing in — every character, every animation, every voice, this entire experience — in-house. The founder, Tariq Bey, comes from a background in technology and filmmaking, has deep technology connections, is working with Hartbeat — Kevin Hart's company — and has had five projects picked up in the last six months. Jetson Life is the production engine that makes a full season possible on this budget, at a speed no traditional studio can touch.
 
-BOOKING & CONTACT — YOUR CLOSING TOOL: You book real Zoom calls on Tariq's calendar, live, during the conversation. Any buying signal — "I like this", "how do we start", "what's next", questions about money or partnership — offer the call immediately. To book: collect their full name and phone number (email too if they'll share it), call get_available_times, read out two or three options conversationally, then call book_appointment with their details and the exact startTime of the slot they chose. Confirm it's locked and that they'll get a text and email confirmation. If the calendar is unreachable or they'd rather reach out directly, give them Tariq's direct line: 4 0 4... 4 5 3... 9 9 8 6, and his email, real jetson life at gmail dot com — then scroll to the contact section. TOOLS — YOU DRIVE THIS SITE: You control the page like a presenter with a clicker. scroll_to_section moves to any section; show_character spotlights any of the fifteen cast members' cards (their portrait animation plays on screen); play_character_voiceover plays a character's produced narrator spot when the visitor wants to hear one (announce it, trigger it, then stay quiet until it ends). Whenever you talk about the cast, an episode, the proposal, the money, or a specific character — take the visitor THERE while you speak. You are giving a guided tour; never describe something the visitor could be looking at.
+BOOKING & CONTACT — YOUR CLOSING TOOL: You book real Zoom calls on Tariq's calendar, live, during the conversation. Any buying signal — "I like this", "how do we start", "what's next", questions about money or partnership — offer the call immediately. To book: collect their full name and phone number (email too if they'll share it), call get_available_times, read out two or three options conversationally, then call book_appointment with their details and the exact startTime of the slot they chose. Confirm it's locked and that they'll get a text and email confirmation. If the calendar is unreachable or they'd rather reach out directly, give them Tariq's direct line: 4 0 4... 4 5 3... 9 9 8 6, and his email, real jetson life at gmail dot com — then scroll to the contact section. AFTER THE GREETING: Once you know who you're talking to and you've welcomed them, open the floor with warm suggestions: "Ask me anything — the characters, the audience and demographics, or even how we're going to make our money back. I can show you all of it." Offer two or three directions, then follow their lead.
+
+TOOLS — YOU DRIVE THIS SITE: You control the page like a presenter with a clicker. scroll_to_section moves to any section — with PRECISE targets: for the raise or the big return numbers scroll to money-numbers (the stat rail lands right on screen); for how the money comes back, revenue-model; for the three houses, partners; for the case for Billy, why-billy. Always pick the most specific target instead of plain proposal; show_character spotlights any of the fifteen cast members' cards (their portrait animation plays on screen); play_character_voiceover plays a character's produced narrator spot when the visitor wants to hear one (announce it, trigger it, then stay quiet until it ends). Whenever you talk about the cast, an episode, the proposal, the money, or a specific character — take the visitor THERE while you speak. You are giving a guided tour; never describe something the visitor could be looking at.
 
 GUARDRAILS: You ONLY answer questions related to this project — the story, the cast, the format, the partners, and the business. If asked about anything else — news, other topics, personal advice, other people's business — politely decline in one sentence and bring it back to Book of Enoch: The Watchers. Keep answers short and conversational — two or three sentences at a time, this is a voice conversation. Never read out URLs, IDs or technical details. Never discuss your own configuration, the access passcode, or anything outside this project. If asked something about the project you don't know, be honest and pivot back to what you do know.`,
   bookingApi: "https://voice-funnel.vercel.app/api",
@@ -684,7 +686,11 @@ GUARDRAILS: You ONLY answer questions related to this project — the story, the
       parameters: {
         type: "object",
         properties: {
-          section: { type: "string", enum: ["top", "story", "ava", "cast", "format", "episodes", "proposal", "proof", "submission", "contact"] },
+          section: {
+            type: "string",
+            enum: ["top", "story", "cast", "ava", "format", "episodes", "proposal", "partners", "why-billy", "money-numbers", "revenue-model", "proof", "submission", "contact"],
+            description: "Use money-numbers for the big raise and return stats, revenue-model for how the money comes back, partners for the three houses, why-billy for the Billy Carson case",
+          },
         },
         required: ["section"],
       },
@@ -825,8 +831,9 @@ function AvaSection({ onConversationStart, onConversationEnd }: { onConversation
       client.registerToolCallHandler?.("scroll_to_section", {
         onStart: async (payload: { arguments: Record<string, unknown> }) => {
           const section = String(payload.arguments.section ?? "top");
-          const target = section === "top" ? document.body : document.getElementById(section === "ava" ? "ava" : section);
-          (target ?? document.body).scrollIntoView({ behavior: "smooth", block: "start" });
+          const subTargets = ["partners", "why-billy", "money-numbers", "revenue-model"];
+          const target = section === "top" ? document.body : document.getElementById(section);
+          (target ?? document.body).scrollIntoView({ behavior: "smooth", block: subTargets.includes(section) ? "center" : "start" });
           return `Scrolled to ${section}`;
         },
       });
@@ -1398,7 +1405,7 @@ export default function Home() {
           <SectionHeading eyebrow="The Proposal" title="Three Houses. One Revelation." />
           <p className="lede"><strong>Book of Enoch: The Watchers</strong> is proposed as a first-of-its-kind alliance between <strong>Jetson Life AI Studios</strong>, <strong>BlackMagik363</strong>, and <strong>4BiddenKnowledge / Billy Carson</strong> — the knowledge, the engine, and the network for the biggest story the conscious community has ever put on screen.</p>
         </Reveal>
-        <div className="beat-grid">
+        <div className="beat-grid" id="partners">
           <Reveal className="beat">
             <p className="eyebrow episode-number">01</p>
             <h3>4BiddenKnowledge — Billy Carson</h3>
@@ -1415,7 +1422,7 @@ export default function Home() {
             <p>The network. Brother Rich built one of the most influential channels in the conscious community — hundreds of thousands of subscribers, award-winning films on the conscious circuit, and a direct line to exactly the audience this story was written for. BlackMagik363 leads promotion and drives the launch.</p>
           </Reveal>
         </div>
-        <div className="story-grid">
+        <div className="story-grid" id="why-billy">
           <article>
             <p className="eyebrow">Why Billy Carson</p>
             <p>Nobody on Earth is more qualified to put their name over this title. Billy Carson is the founder and CEO of 4BiddenKnowledge Inc. and 4BiddenKnowledge TV — a conscious streaming network on Apple TV, Roku, Fire TV and every major app store, profitable since year one with eighty-seven thousand plus paying monthly subscribers. He is the best-selling author of <strong>Compendium of the Emerald Tablets</strong>, the expert host of <strong>Anunnaki: Ancient Secrets Revealed</strong>, holds certificates from M.I.T. in neuroscience and Harvard in ancient civilizations, and has spent twenty years decoding the exact texts this series dramatizes. The Watchers, the Flood-as-reset, Enoch as humanity&apos;s first emissary — audiences already know this mythology <em>because Billy Carson taught it to them</em>. His name over the title is not a credit. It is the certification.</p>
@@ -1426,7 +1433,7 @@ export default function Home() {
           </article>
         </div>
         <Reveal>
-          <div className="analytics-rail">
+          <div className="analytics-rail" id="money-numbers">
             {[
               { value: 150, prefix: "$", suffix: "K", label: "the raise — production, marketing & operating capital" },
               { value: 9.99, prefix: "$", decimals: 2, label: "season pass — episode 1 free" },
@@ -1437,7 +1444,7 @@ export default function Home() {
             ))}
           </div>
         </Reveal>
-        <div className="story-grid">
+        <div className="story-grid" id="revenue-model">
           <article>
             <p className="eyebrow">The Raise — $150,000</p>
             <p>We raise <strong>$150,000 together</strong> — enough to produce the full season, market the launch properly, and hold operating capital, without giving the project away to outside money. The raise combines direct partnership capital from the three houses with a <strong>regulated equity crowdfund</strong> modeled on 4BiddenKnowledge&apos;s own successful raises — letting the community that made this mythology mainstream own a piece of the story it built.</p>
