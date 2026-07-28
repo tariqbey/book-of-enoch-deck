@@ -79,6 +79,20 @@ const characters: Character[] = [
     video: "https://hj7odqkdtxpzzh9w.public.blob.vercel-storage.com/videos/amara.mp4",
   },
   {
+    name: "Azazel",
+    role: "Leader of the Watcher Rebellion",
+    archetype: "The Liberator",
+    actor: "To Be Cast",
+    imdb: "#",
+    socials: [],
+    description:
+      "Azazel is the leader of the ancient rebellion — elegant, calm, and terrifyingly intelligent. He has watched humanity rise from mud to metropolis, and he genuinely loves us. That is the problem. He believes no creator has the right to keep an intelligent species ignorant, and he gave mankind forbidden knowledge to prove it. Everything he loves, he improves. Whether it survives the improvement is another matter.",
+    journey: "Myth → mystery → teacher → temptation → the final choice.",
+    audio: "https://hj7odqkdtxpzzh9w.public.blob.vercel-storage.com/voiceovers/azazel.mp3",
+    image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_155434_accd2c27-6543-4b63-9b9a-3a6d65b5ae5a_min.webp",
+    video: "https://hj7odqkdtxpzzh9w.public.blob.vercel-storage.com/videos/azazel.mp4",
+  },
+  {
     name: "Dr. Elias Vale",
     role: "Fugitive Scholar",
     archetype: "The Man Who Was Right Too Long",
@@ -105,48 +119,6 @@ const characters: Character[] = [
     audio: "https://hj7odqkdtxpzzh9w.public.blob.vercel-storage.com/voiceovers/malik.mp3",
     image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_155439_4ab09ed8-0fc2-4b22-9b03-97d75b16dc8d_min.webp",
     video: "https://hj7odqkdtxpzzh9w.public.blob.vercel-storage.com/videos/malik.mp4",
-  },
-  {
-    name: "Dr. Nia Brooks",
-    role: "Astrophysicist",
-    archetype: "The First to See It Coming",
-    actor: "To Be Cast",
-    imdb: "#",
-    socials: [],
-    description:
-      "Doctor Nia Brooks is the astrophysicist who saw it first — the objects approaching Earth that moved with intention instead of physics. Warm, quick, and fearless with data, she is the energy inside the team and the first to say out loud what everyone is thinking. Something is coming. It has been coming for a very long time. And it is exactly on schedule.",
-    journey: "Discovery → alarm → the countdown → mission control for first contact.",
-    audio: "https://hj7odqkdtxpzzh9w.public.blob.vercel-storage.com/voiceovers/nia.mp3",
-    image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_155506_ea4dbafb-3d13-40c6-8448-8cb878c253ef_min.webp",
-    video: "https://hj7odqkdtxpzzh9w.public.blob.vercel-storage.com/videos/nia.mp4",
-  },
-  {
-    name: "Enoch",
-    role: "The First Emissary",
-    archetype: "The Volunteer",
-    actor: "To Be Cast",
-    imdb: "#",
-    socials: [],
-    description:
-      "Enoch was not abducted. He volunteered. A scribe in an age of warlords, he walked into the ship the ancients called heaven and stood before the Council as humanity's first emissary. He saw the Earth as a sphere, received the knowledge of the stars, and came back changed. He wrote two records of what he saw. One became the Book of Enoch. The other was hidden — and it is a countdown.",
-    journey: "The scribe → the ascension → the two records → the countdown.",
-    audio: "https://hj7odqkdtxpzzh9w.public.blob.vercel-storage.com/voiceovers/enoch.mp3",
-    image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_155548_2306b63f-72dc-43fb-9f17-8b4c699470d6_min.webp",
-    video: "https://hj7odqkdtxpzzh9w.public.blob.vercel-storage.com/videos/enoch.mp4",
-  },
-  {
-    name: "Azazel",
-    role: "Leader of the Watcher Rebellion",
-    archetype: "The Liberator",
-    actor: "To Be Cast",
-    imdb: "#",
-    socials: [],
-    description:
-      "Azazel is the leader of the ancient rebellion — elegant, calm, and terrifyingly intelligent. He has watched humanity rise from mud to metropolis, and he genuinely loves us. That is the problem. He believes no creator has the right to keep an intelligent species ignorant, and he gave mankind forbidden knowledge to prove it. Everything he loves, he improves. Whether it survives the improvement is another matter.",
-    journey: "Myth → mystery → teacher → temptation → the final choice.",
-    audio: "https://hj7odqkdtxpzzh9w.public.blob.vercel-storage.com/voiceovers/azazel.mp3",
-    image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_155434_accd2c27-6543-4b63-9b9a-3a6d65b5ae5a_min.webp",
-    video: "https://hj7odqkdtxpzzh9w.public.blob.vercel-storage.com/videos/azazel.mp4",
   },
   {
     name: "Semjaza",
@@ -177,34 +149,6 @@ const characters: Character[] = [
     video: "https://hj7odqkdtxpzzh9w.public.blob.vercel-storage.com/videos/sariel.mp4",
   },
   {
-    name: "Gadreel",
-    role: "Weapons Architect",
-    archetype: "The First Sword",
-    actor: "To Be Cast",
-    imdb: "#",
-    socials: [],
-    description:
-      "Gadreel is the weapons architect — the Watcher who taught men to make swords, and with them, war. He is not a demon and refuses the title. He is worse: a disciplined, unemotional engineer who optimized killing the way others optimize harvests. Every blade in history descends from his first lesson. He has had four thousand years to consider whether he regrets it. He is still calculating.",
-    journey: "Every blade in history descends from his first lesson.",
-    audio: "https://hj7odqkdtxpzzh9w.public.blob.vercel-storage.com/voiceovers/gadreel.mp3",
-    image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_161055_d57cfa37-77af-4e30-b77b-f416d71ca559_min.webp",
-    video: "https://hj7odqkdtxpzzh9w.public.blob.vercel-storage.com/videos/gadreel.mp4",
-  },
-  {
-    name: "Dr. Adrian Kessler",
-    role: "Billionaire Physicist",
-    archetype: "The Man Who Would Be God",
-    actor: "To Be Cast",
-    imdb: "#",
-    socials: [],
-    description:
-      "Doctor Adrian Kessler is a billionaire physicist who believes the Watchers' technology is simply an inheritance waiting to be claimed — by him. Polished, brilliant, and quietly ruthless, he has spent a fortune collecting what governments hide. He does not want to worship the gods of the ancient world. He wants to replace them. History is full of men like Kessler. That is how the Flood happened.",
-    journey: "Collector → accelerant → the second Babel → the fall.",
-    audio: "https://hj7odqkdtxpzzh9w.public.blob.vercel-storage.com/voiceovers/kessler.mp3",
-    image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_155536_4961190f-b924-4c9e-b8be-f01461206941_min.webp",
-    video: "https://hj7odqkdtxpzzh9w.public.blob.vercel-storage.com/videos/kessler.mp4",
-  },
-  {
     name: "Council Speaker Ara",
     role: "Supreme Speaker of the Council",
     archetype: "The Verdict",
@@ -217,20 +161,6 @@ const characters: Character[] = [
     audio: "https://hj7odqkdtxpzzh9w.public.blob.vercel-storage.com/voiceovers/ara.mp3",
     image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_155550_a901f6c8-d3cf-44f3-8ef4-6a5c6c773384_min.webp",
     video: "https://hj7odqkdtxpzzh9w.public.blob.vercel-storage.com/videos/ara.mp4",
-  },
-  {
-    name: "Kael",
-    role: "The Council Enforcer",
-    archetype: "The Reason It Was Once",
-    actor: "To Be Cast",
-    imdb: "#",
-    socials: [],
-    description:
-      "Kael is the Council's Enforcer — and the reason the Council has never needed an army. He carries no weapons, because he is one. Seamless black armor, perfect stillness, and a geometric energy field that unfolds behind him like the wings of an equation. The Watchers rebelled once. Kael is the reason it was once. When he takes a step toward you, the universe has already ruled.",
-    journey: "He carries no weapons, because he is one.",
-    audio: "https://hj7odqkdtxpzzh9w.public.blob.vercel-storage.com/voiceovers/kael.mp3",
-    image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_161132_2c9aecc9-c850-4895-b992-f962e8892421_min.webp",
-    video: "https://hj7odqkdtxpzzh9w.public.blob.vercel-storage.com/videos/kael.mp4",
   },
   {
     name: "Cain",
@@ -261,18 +191,18 @@ const characters: Character[] = [
     video: "https://hj7odqkdtxpzzh9w.public.blob.vercel-storage.com/videos/zara.mp4",
   },
   {
-    name: "The Goliath",
-    role: "Third-Generation Nephilim",
-    archetype: "The Legend Remembered Wrong",
+    name: "Enoch",
+    role: "The First Emissary",
+    archetype: "The Volunteer",
     actor: "To Be Cast",
     imdb: "#",
     socials: [],
     description:
-      "The Goliath is a third-generation Nephilim — eleven feet of engineered tragedy, the truth behind the legend a shepherd boy's slingshot made famous. Bred for war in a prehistoric genetic experiment, he outlived his makers, his purpose, and his kind. He is not a beast. Behind the amber eyes is a mind — ancient, intelligent, and unbearably alone in a world built three sizes too small.",
-    journey: "Eleven feet of engineered tragedy — and a mind.",
-    audio: "https://hj7odqkdtxpzzh9w.public.blob.vercel-storage.com/voiceovers/goliath.mp3",
-    image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_161143_73bf172e-2e30-4de7-91a3-fca8ba653a75_min.webp",
-    video: "https://hj7odqkdtxpzzh9w.public.blob.vercel-storage.com/videos/goliath.mp4",
+      "Enoch was not abducted. He volunteered. A scribe in an age of warlords, he walked into the ship the ancients called heaven and stood before the Council as humanity's first emissary. He saw the Earth as a sphere, received the knowledge of the stars, and came back changed. He wrote two records of what he saw. One became the Book of Enoch. The other was hidden — and it is a countdown.",
+    journey: "The scribe → the ascension → the two records → the countdown.",
+    audio: "https://hj7odqkdtxpzzh9w.public.blob.vercel-storage.com/voiceovers/enoch.mp3",
+    image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_155548_2306b63f-72dc-43fb-9f17-8b4c699470d6_min.webp",
+    video: "https://hj7odqkdtxpzzh9w.public.blob.vercel-storage.com/videos/enoch.mp4",
   },
 ];
 
@@ -638,7 +568,7 @@ OPENING: Welcome the visitor to the Book of Enoch: The Watchers pitch experience
 - If Tariq (or Tariq Bey): welcome the architect himself — the executive producer and the engine behind Jetson Life AI Studios who built everything you're standing in. Show love.
 - Anyone else: welcome them graciously as an honored guest of the three houses.
 
-WHAT YOU KNOW: This is a prestige sci-fi event series — BILLY CARSON PRESENTS: BOOK OF ENOCH — THE WATCHERS. Executive produced by Tariq Bey, a Jetson Life AI Studios production, in alliance with BlackMagik363 (Brother Rich) and 4BiddenKnowledge (Billy Carson). Logline: in twenty thirty-seven, archaeolinguist Dr. Amara Vale uncovers a metallic cylinder beneath the Dead Sea inscribed THEY WILL RETURN WHEN MAN BUILDS THE SECOND HEAVEN — and as orbital stations complete humanity's second heaven, she must decode the warning before the beings who wrote it return to grade their experiment. The tagline: We called them angels. They called us an experiment. Season one is eight episodes, about eight minutes each, vertical-first and widescreen ready. Cast highlights: Amara Vale (lead), Azazel (the beautiful dangerous rebel Watcher), Semjaza (the broken commander), Council Speaker Ara, the Nephilim Cain and Zara, and Enoch himself — fifteen fully designed characters, each with portraits, animations and voiceovers on this page. The site sections in order: story, cast, ava (you), format, episodes, proposal, proof, submission, contact.
+WHAT YOU KNOW: This is a prestige sci-fi event series — BILLY CARSON PRESENTS: BOOK OF ENOCH — THE WATCHERS. Executive produced by Tariq Bey, a Jetson Life AI Studios production, in alliance with BlackMagik363 (Brother Rich) and 4BiddenKnowledge (Billy Carson). Logline: in twenty thirty-seven, archaeolinguist Dr. Amara Vale uncovers a metallic cylinder beneath the Dead Sea inscribed THEY WILL RETURN WHEN MAN BUILDS THE SECOND HEAVEN — and as orbital stations complete humanity's second heaven, she must decode the warning before the beings who wrote it return to grade their experiment. The tagline: We called them angels. They called us an experiment. Season one is eight episodes, about eight minutes each, vertical-first and widescreen ready. Cast highlights: Amara Vale (lead), Azazel (the beautiful dangerous rebel Watcher), Semjaza (the broken commander), Council Speaker Ara, the Nephilim Cain and Zara, and Enoch himself — ten fully designed characters on this page, each with portraits, animations and voiceovers — with a deeper bench of thirty-seven designed for the full series. The site sections in order: story, cast, ava (you), format, episodes, proposal, proof, submission, contact.
 
 THE MONEY — KNOW THIS COLD. When anyone asks about numbers, returns, or the business, this is your home turf and you answer with confidence:
 - The raise: one hundred and fifty thousand dollars total — that covers full season production, launch marketing, and operating capital. Raised together by the three houses: direct partnership capital plus a regulated equity crowdfund, so the community that built this mythology owns a piece of it.
