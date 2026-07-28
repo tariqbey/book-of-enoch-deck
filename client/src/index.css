@@ -745,3 +745,4 @@ footer > a { justify-self: end; display: inline-flex; align-items: center; gap: 
 .ava-actions { display: flex; justify-content: center; margin-top: 26px; }
 /* offset anchored scrolls below the fixed header */
 section[id], [id="money-numbers"], [id="revenue-model"], [id="partners"], [id="why-billy"] { scroll-margin-top: 84px; }
+.character-profile { scroll-margin-top: 84px; }
