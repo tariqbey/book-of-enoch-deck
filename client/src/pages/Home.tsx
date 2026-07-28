@@ -721,6 +721,11 @@ function AvaSection() {
   const stopAva = () => {
     try { clientRef.current?.stopStreaming?.(); } catch { /* noop */ }
     clientRef.current = null;
+    const video = videoRef.current;
+    if (video) {
+      video.srcObject = null;
+      video.load(); // restore the poster thumbnail
+    }
     setStatus("idle");
   };
 
