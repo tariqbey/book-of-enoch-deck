@@ -35,15 +35,15 @@ const DECK = {
 
 // Media — leave "" to show a placeholder. Swap in Vercel Blob URLs when ready.
 const MEDIA = {
-  logo: `${import.meta.env.BASE_URL}logos/jetson-life-logo.png`,
+  logo: "https://hj7odqkdtxpzzh9w.public.blob.vercel-storage.com/logos/jetson-life-logo.png",
   heroImage: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_182804_51734d47-9bb5-4aab-9ff7-fa2a087f8111_min.webp",
   heroVideo: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_190631_bd68de41-b831-42e0-a0c3-e1e273ca3251.mp4",
   coverVideo: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_171555_3db819e6-2180-4b64-815d-295910926791.mp4",
-  themeSong: `${import.meta.env.BASE_URL}audio/times-up.mp3`,
+  themeSong: "https://hj7odqkdtxpzzh9w.public.blob.vercel-storage.com/audio/times-up.mp3",
   cdVideo: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_190228_914df6f6-f5f4-46d8-840b-f1313af1e7d6.mp4",   // spinning disc animation shown while the theme song plays
 };
 
-const INSTRUMENTAL_URL = `${import.meta.env.BASE_URL}audio/times-up-instrumental.mp3`;
+const INSTRUMENTAL_URL = "https://hj7odqkdtxpzzh9w.public.blob.vercel-storage.com/audio/times-up-instrumental.mp3";
 
 const LOGO_PLACEHOLDER =
   "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M32 6 58 32 32 58 6 32Z' fill='none' stroke='%23c5a059' stroke-width='2'/%3E%3Cpath d='M32 18 46 32 32 46 18 32Z' fill='none' stroke='%23c5a059' stroke-width='1' opacity='.5'/%3E%3C/svg%3E";
@@ -74,7 +74,7 @@ const characters: Character[] = [
     description:
       "Doctor Amara Vale built her career tearing down sensational claims about ancient civilizations — the same claims that destroyed her father. Brilliant, disciplined, and relentlessly skeptical, she trusts only what the evidence can prove. But beneath the Dead Sea, the evidence has started proving the impossible. And the deepest secret isn't written on the artifact. It's written in her blood.",
     journey: "Skeptic → investigator → hunted witness → descendant → humanity's representative.",
-    audio: "https://cdn.jsdelivr.net/gh/tariqbey/book-of-enoch-deck@main/client/public/voiceovers/amara.mp3",
+    audio: "https://hj7odqkdtxpzzh9w.public.blob.vercel-storage.com/voiceovers/amara.mp3",
     image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_155427_639c4247-3fcb-44ec-a1f5-66b5bd39fd54_min.webp",
     video: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_171555_3db819e6-2180-4b64-815d-295910926791.mp4",
   },
@@ -88,7 +88,7 @@ const characters: Character[] = [
     description:
       "Doctor Elias Vale was once one of America's most promising scholars of ancient texts — until his obsession with the Book of Enoch cost him his career, his family, and finally his freedom. The world believes he vanished twenty-five years ago. The truth is worse. He found real evidence. And he has been running from governments and something far older ever since.",
     journey: "Missing father → conspiracy figure → mentor → suspected traitor.",
-    audio: "https://cdn.jsdelivr.net/gh/tariqbey/book-of-enoch-deck@main/client/public/voiceovers/elias.mp3",
+    audio: "https://hj7odqkdtxpzzh9w.public.blob.vercel-storage.com/voiceovers/elias.mp3",
     image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_155431_45940a8f-576e-4c8c-bee4-2f6a2d7097bb_min.webp",
     video: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_171527_dbf99eb6-6964-4763-8cf7-21e674e23bae.mp4",
   },
@@ -102,7 +102,7 @@ const characters: Character[] = [
     description:
       "Malik Cross spent his career in the shadows of special operations — until strange deaths at a Dead Sea excavation pulled him into a war older than nations. He is Amara Vale's protector, never her babysitter; she saves him as often as he saves her. And ten years ago, on a classified mission he has never spoken of, Malik saw an object that should not exist. Now it's awake.",
     journey: "Hired gun → believer → Amara's anchor → the classified secret surfaces.",
-    audio: "https://cdn.jsdelivr.net/gh/tariqbey/book-of-enoch-deck@main/client/public/voiceovers/malik.mp3",
+    audio: "https://hj7odqkdtxpzzh9w.public.blob.vercel-storage.com/voiceovers/malik.mp3",
     image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_155439_4ab09ed8-0fc2-4b22-9b03-97d75b16dc8d_min.webp",
     video: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_171600_acf022aa-61ed-45bf-9512-a90324509804.mp4",
   },
@@ -116,7 +116,7 @@ const characters: Character[] = [
     description:
       "Doctor Nia Brooks is the astrophysicist who saw it first — the objects approaching Earth that moved with intention instead of physics. Warm, quick, and fearless with data, she is the energy inside the team and the first to say out loud what everyone is thinking. Something is coming. It has been coming for a very long time. And it is exactly on schedule.",
     journey: "Discovery → alarm → the countdown → mission control for first contact.",
-    audio: "https://cdn.jsdelivr.net/gh/tariqbey/book-of-enoch-deck@main/client/public/voiceovers/nia.mp3",
+    audio: "https://hj7odqkdtxpzzh9w.public.blob.vercel-storage.com/voiceovers/nia.mp3",
     image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_155506_ea4dbafb-3d13-40c6-8448-8cb878c253ef_min.webp",
     video: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_171602_1a1c542c-cc16-41ae-b43b-97b3184a0043.mp4",
   },
@@ -130,7 +130,7 @@ const characters: Character[] = [
     description:
       "Enoch was not abducted. He volunteered. A scribe in an age of warlords, he walked into the ship the ancients called heaven and stood before the Council as humanity's first emissary. He saw the Earth as a sphere, received the knowledge of the stars, and came back changed. He wrote two records of what he saw. One became the Book of Enoch. The other was hidden — and it is a countdown.",
     journey: "The scribe → the ascension → the two records → the countdown.",
-    audio: "https://cdn.jsdelivr.net/gh/tariqbey/book-of-enoch-deck@main/client/public/voiceovers/enoch.mp3",
+    audio: "https://hj7odqkdtxpzzh9w.public.blob.vercel-storage.com/voiceovers/enoch.mp3",
     image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_155548_2306b63f-72dc-43fb-9f17-8b4c699470d6_min.webp",
     video: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_171656_40f5a490-8e6a-4549-8b42-461cdf90b5ec.mp4",
   },
@@ -144,7 +144,7 @@ const characters: Character[] = [
     description:
       "Azazel is the leader of the ancient rebellion — elegant, calm, and terrifyingly intelligent. He has watched humanity rise from mud to metropolis, and he genuinely loves us. That is the problem. He believes no creator has the right to keep an intelligent species ignorant, and he gave mankind forbidden knowledge to prove it. Everything he loves, he improves. Whether it survives the improvement is another matter.",
     journey: "Myth → mystery → teacher → temptation → the final choice.",
-    audio: "https://cdn.jsdelivr.net/gh/tariqbey/book-of-enoch-deck@main/client/public/voiceovers/azazel.mp3",
+    audio: "https://hj7odqkdtxpzzh9w.public.blob.vercel-storage.com/voiceovers/azazel.mp3",
     image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_155434_accd2c27-6543-4b63-9b9a-3a6d65b5ae5a_min.webp",
     video: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_171530_a3624f2f-f5d6-4709-be67-1af3357f233a.mp4",
   },
@@ -158,7 +158,7 @@ const characters: Character[] = [
     description:
       "Semjaza commanded the two hundred Watchers who descended in defiance of the Council. Where Azazel made peace with the rebellion, Semjaza carries its guilt like a second skeleton. He remembers the Nephilim. He remembers the screaming. He remembers the Flood. Imprisoned beneath the earth for thousands of years, he has one warning for anyone who will listen: do not let Azazel love you.",
     journey: "Imprisoned legend → warning → reluctant ally → redemption.",
-    audio: "https://cdn.jsdelivr.net/gh/tariqbey/book-of-enoch-deck@main/client/public/voiceovers/semjaza.mp3",
+    audio: "https://hj7odqkdtxpzzh9w.public.blob.vercel-storage.com/voiceovers/semjaza.mp3",
     image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_155437_3612e698-66e2-47bf-a1a2-1062e366e5cc_min.webp",
     video: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_171557_180d1de0-9575-4892-b0c2-dbe5fd1eab48.mp4",
   },
@@ -172,7 +172,7 @@ const characters: Character[] = [
     description:
       "Sariel is the Watcher of the Moon — master of lunar and gravitational science, beautiful and unsettling as deep water. Where Azazel preaches freedom, Sariel believes civilization must be managed like an orbit: precisely, coldly, forever. Stones float in his presence. So do people, if he wishes it. He does not hate humanity. He simply believes we were never meant to steer.",
     journey: "Observer → adversary → the case for control → the Council's fracture.",
-    audio: "https://cdn.jsdelivr.net/gh/tariqbey/book-of-enoch-deck@main/client/public/voiceovers/sariel.mp3",
+    audio: "https://hj7odqkdtxpzzh9w.public.blob.vercel-storage.com/voiceovers/sariel.mp3",
     image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_155521_9d00f870-e077-495a-a54c-bdb5d8193248_min.webp",
     video: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_171625_ef1e18a0-74ac-4d15-bf34-85636f37a420.mp4",
   },
@@ -186,7 +186,7 @@ const characters: Character[] = [
     description:
       "Gadreel is the weapons architect — the Watcher who taught men to make swords, and with them, war. He is not a demon and refuses the title. He is worse: a disciplined, unemotional engineer who optimized killing the way others optimize harvests. Every blade in history descends from his first lesson. He has had four thousand years to consider whether he regrets it. He is still calculating.",
     journey: "Every blade in history descends from his first lesson.",
-    audio: "https://cdn.jsdelivr.net/gh/tariqbey/book-of-enoch-deck@main/client/public/voiceovers/gadreel.mp3",
+    audio: "https://hj7odqkdtxpzzh9w.public.blob.vercel-storage.com/voiceovers/gadreel.mp3",
     image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_161055_d57cfa37-77af-4e30-b77b-f416d71ca559_min.webp",
     video: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_171733_8a8ef643-5bb8-40b4-be49-a1c044db0fa1.mp4",
   },
@@ -200,7 +200,7 @@ const characters: Character[] = [
     description:
       "Doctor Adrian Kessler is a billionaire physicist who believes the Watchers' technology is simply an inheritance waiting to be claimed — by him. Polished, brilliant, and quietly ruthless, he has spent a fortune collecting what governments hide. He does not want to worship the gods of the ancient world. He wants to replace them. History is full of men like Kessler. That is how the Flood happened.",
     journey: "Collector → accelerant → the second Babel → the fall.",
-    audio: "https://cdn.jsdelivr.net/gh/tariqbey/book-of-enoch-deck@main/client/public/voiceovers/kessler.mp3",
+    audio: "https://hj7odqkdtxpzzh9w.public.blob.vercel-storage.com/voiceovers/kessler.mp3",
     image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_155536_4961190f-b924-4c9e-b8be-f01461206941_min.webp",
     video: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_171636_5eab117c-03ab-4cde-8679-5c0a26468606.mp4",
   },
@@ -214,7 +214,7 @@ const characters: Character[] = [
     description:
       "Ara is the Supreme Speaker of the Council — the voice of a civilization so old that stars have died waiting for it to change its mind. Galaxies literally turn behind her eyes. She does not threaten, because she has never needed to. When Ara inclines her head, worlds are weighed. Humanity's file is open on her desk. The Flood was her signature. The question is whether she will sign again.",
     journey: "The judgment of Earth → the second Flood vote → the hearing.",
-    audio: "https://cdn.jsdelivr.net/gh/tariqbey/book-of-enoch-deck@main/client/public/voiceovers/ara.mp3",
+    audio: "https://hj7odqkdtxpzzh9w.public.blob.vercel-storage.com/voiceovers/ara.mp3",
     image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_155550_a901f6c8-d3cf-44f3-8ef4-6a5c6c773384_min.webp",
     video: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_171700_453d7c88-1bc2-4d4e-aa3a-9017c65e37de.mp4",
   },
@@ -228,7 +228,7 @@ const characters: Character[] = [
     description:
       "Kael is the Council's Enforcer — and the reason the Council has never needed an army. He carries no weapons, because he is one. Seamless black armor, perfect stillness, and a geometric energy field that unfolds behind him like the wings of an equation. The Watchers rebelled once. Kael is the reason it was once. When he takes a step toward you, the universe has already ruled.",
     journey: "He carries no weapons, because he is one.",
-    audio: "https://cdn.jsdelivr.net/gh/tariqbey/book-of-enoch-deck@main/client/public/voiceovers/kael.mp3",
+    audio: "https://hj7odqkdtxpzzh9w.public.blob.vercel-storage.com/voiceovers/kael.mp3",
     image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_161132_2c9aecc9-c850-4895-b992-f962e8892421_min.webp",
     video: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_171810_44a636d7-8779-4fb4-b5a3-7b1bfc21f66a.mp4",
   },
@@ -242,7 +242,7 @@ const characters: Character[] = [
     description:
       "Cain is eight feet of living history — a first-generation Nephilim who survived the Flood that was engineered to erase his kind. He has worn a thousand names across a hundred civilizations, and carries scars older than the pyramids. Ancient, soulful, and terrifying, he has spent millennia protecting humanity from both of his bloodlines. He is not a monster. He is what mercy looks like after four thousand years.",
     journey: "Legend → guardian → the bridge between bloodlines.",
-    audio: "https://cdn.jsdelivr.net/gh/tariqbey/book-of-enoch-deck@main/client/public/voiceovers/cain.mp3",
+    audio: "https://hj7odqkdtxpzzh9w.public.blob.vercel-storage.com/voiceovers/cain.mp3",
     image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_155541_209f7066-5a89-4514-aa7c-2b3423aa619c_min.webp",
     video: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_171650_9b472b37-3c27-42ea-9907-3294fee226b9.mp4",
   },
@@ -256,7 +256,7 @@ const characters: Character[] = [
     description:
       "Zara looks like any brilliant young woman in the city — until something moves her, and gold geometry flares behind her eyes. She is Nephilim, centuries old, hiding in plain sight among the species that would dissect her. Guarded, sharp, and achingly alone, she has survived by trusting no one. The Watchers' return will force her to choose a side. Both sides think she already has.",
     journey: "Ghost in the city → reluctant ally → the choosing of sides.",
-    audio: "https://cdn.jsdelivr.net/gh/tariqbey/book-of-enoch-deck@main/client/public/voiceovers/zara.mp3",
+    audio: "https://hj7odqkdtxpzzh9w.public.blob.vercel-storage.com/voiceovers/zara.mp3",
     image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_155544_cf35519d-6b6c-4e61-958c-954490ea17c9_min.webp",
     video: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_171653_b103cd7c-fd70-4703-81b0-2d9a7c0b9aca.mp4",
   },
@@ -270,7 +270,7 @@ const characters: Character[] = [
     description:
       "The Goliath is a third-generation Nephilim — eleven feet of engineered tragedy, the truth behind the legend a shepherd boy's slingshot made famous. Bred for war in a prehistoric genetic experiment, he outlived his makers, his purpose, and his kind. He is not a beast. Behind the amber eyes is a mind — ancient, intelligent, and unbearably alone in a world built three sizes too small.",
     journey: "Eleven feet of engineered tragedy — and a mind.",
-    audio: "https://cdn.jsdelivr.net/gh/tariqbey/book-of-enoch-deck@main/client/public/voiceovers/goliath.mp3",
+    audio: "https://hj7odqkdtxpzzh9w.public.blob.vercel-storage.com/voiceovers/goliath.mp3",
     image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_161143_73bf172e-2e30-4de7-91a3-fca8ba653a75_min.webp",
     video: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_171814_a1791569-36d9-429c-95fe-8d8d86015810.mp4",
   },
@@ -613,10 +613,10 @@ function VaultGate({ onUnlock }: { onUnlock: () => void }) {
 // ============================================================================
 //  AVA — interactive AI host (Anam.ai)
 //  NOTE: token is minted client-side; move to a serverless function when the
-//  project lands on Vercel to keep the API key out of the bundle.
+//  the Anam API key never ships to the browser.
 // ============================================================================
 const AVA = {
-  apiKey: "MTU4ZjlkMDYtYzNmYy00YjZhLTkxMzctM2ViNDU2YzgyMjg4OktFeEZMWkMyU3lpWnVqV3VPdkNOL1NjSUxDMU5sMjJkMnVjZGl5aDI3a289",
+  tokenEndpoints: ["/api/anam-token", "https://book-of-enoch.vercel.app/api/anam-token"],
   avatarId: "edf47a8e-2f18-46fa-9d43-36fb13559d3b",
   avatarModel: "cara-4",
   voiceId: "8cc7ea17-4fc0-11f1-84b0-52bacf74fa75",
@@ -684,21 +684,18 @@ function AvaSection() {
           tools: AVA.tools,
         },
       });
-      // Prefer the serverless endpoint (Vercel) so the API key stays server-side;
-      // fall back to the direct call on static hosting (GitHub Pages).
-      let response = await fetch("/api/anam-token", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: tokenBody,
-      }).catch(() => null);
-      if (!response || !response.ok) {
-        response = await fetch("https://api.anam.ai/v1/auth/session-token", {
+      // The API key lives server-side in a Vercel function; the relative path
+      // serves the Vercel deployment, the absolute one covers static mirrors.
+      let response: Response | null = null;
+      for (const endpoint of AVA.tokenEndpoints) {
+        response = await fetch(endpoint, {
           method: "POST",
-          headers: { "Content-Type": "application/json", Authorization: `Bearer ${AVA.apiKey}` },
+          headers: { "Content-Type": "application/json" },
           body: tokenBody,
-        });
+        }).catch(() => null);
+        if (response?.ok) break;
       }
-      if (!response.ok) throw new Error(`session token ${response.status}`);
+      if (!response || !response.ok) throw new Error(`session token ${response?.status ?? "unreachable"}`);
       const { sessionToken } = await response.json();
       const client = createClient(sessionToken);
       clientRef.current = client;
@@ -735,7 +732,7 @@ function AvaSection() {
         <SectionHeading eyebrow="Meet Your Host" title="Talk to Ava" />
         <p className="lede ava-lede">The world&apos;s first interactive AI pitch host. Ava knows every frame of this project — the mythology, the cast, the numbers. Ask her anything, and she&apos;ll walk you through the site while she answers. Out loud. In real time.</p>
         <div className="ava-stage">
-          <video id="ava-video" ref={videoRef} autoPlay playsInline poster={`${import.meta.env.BASE_URL}ava-poster.webp`} className={`ava-video ${status === "live" ? "is-live" : ""}`} />
+          <video id="ava-video" ref={videoRef} autoPlay playsInline poster="https://hj7odqkdtxpzzh9w.public.blob.vercel-storage.com/ava-poster.webp" className={`ava-video ${status === "live" ? "is-live" : ""}`} />
           {status !== "live" && (
             <div className="ava-overlay">
               {status === "error" ? (
@@ -942,7 +939,7 @@ export default function Home() {
             <video
               key={slug}
               className="studio-logo"
-              src={`${import.meta.env.BASE_URL}logos/${slug}.mp4`}
+              src={`https://hj7odqkdtxpzzh9w.public.blob.vercel-storage.com/logos/${slug}.mp4`}
               autoPlay
               muted
               loop
