@@ -4,6 +4,7 @@ import path from "node:path";
 import { defineConfig } from "vite";
 
 export default defineConfig({
+  base: process.env.GH_PAGES ? "/book-of-enoch-deck/" : "/",
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
