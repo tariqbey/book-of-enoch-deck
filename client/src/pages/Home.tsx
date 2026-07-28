@@ -65,6 +65,20 @@ type Character = {
 
 const characters: Character[] = [
   {
+    name: "Enoch",
+    role: "The Man the Book Is Named For \u00b7 The Main Character",
+    archetype: "The First Human to Stand Before the Gods",
+    actor: "To Be Cast",
+    imdb: "#",
+    socials: [],
+    description:
+      "This is HIS book. Enoch is the axis the entire series turns on — the scribe who was not abducted but VOLUNTEERED, the first human being to walk into the ship the ancients called heaven and stand before the Council as our emissary. He saw the Earth as a sphere, received the knowledge of the stars, and came back carrying the fate of the species. He wrote two records of everything he witnessed: one became the most famous banned book in history. The other was hidden — and it is a countdown that ends in twenty thirty-seven, in the hands of his last descendant, Amara Vale. Every character in this story — human, Watcher, Council, Nephilim — exists inside the wake of what Enoch did. He is the beginning and the ending of this saga.",
+    journey: "The scribe → the ascension → the two records → the countdown.",
+    audio: "https://hj7odqkdtxpzzh9w.public.blob.vercel-storage.com/voiceovers/enoch.mp3",
+    image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_155548_2306b63f-72dc-43fb-9f17-8b4c699470d6_min.webp",
+    video: "https://hj7odqkdtxpzzh9w.public.blob.vercel-storage.com/videos/enoch.mp4",
+  },
+  {
     name: "Dr. Amara Vale",
     role: "Archaeolinguist · Series Lead",
     archetype: "The Skeptic Who Finds Proof",
@@ -189,20 +203,6 @@ const characters: Character[] = [
     audio: "https://hj7odqkdtxpzzh9w.public.blob.vercel-storage.com/voiceovers/zara.mp3",
     image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_155544_cf35519d-6b6c-4e61-958c-954490ea17c9_min.webp",
     video: "https://hj7odqkdtxpzzh9w.public.blob.vercel-storage.com/videos/zara.mp4",
-  },
-  {
-    name: "Enoch",
-    role: "The First Emissary",
-    archetype: "The Volunteer",
-    actor: "To Be Cast",
-    imdb: "#",
-    socials: [],
-    description:
-      "Enoch was not abducted. He volunteered. A scribe in an age of warlords, he walked into the ship the ancients called heaven and stood before the Council as humanity's first emissary. He saw the Earth as a sphere, received the knowledge of the stars, and came back changed. He wrote two records of what he saw. One became the Book of Enoch. The other was hidden — and it is a countdown.",
-    journey: "The scribe → the ascension → the two records → the countdown.",
-    audio: "https://hj7odqkdtxpzzh9w.public.blob.vercel-storage.com/voiceovers/enoch.mp3",
-    image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_155548_2306b63f-72dc-43fb-9f17-8b4c699470d6_min.webp",
-    video: "https://hj7odqkdtxpzzh9w.public.blob.vercel-storage.com/videos/enoch.mp4",
   },
 ];
 
@@ -572,7 +572,7 @@ OPENING: Welcome the visitor to the Book of Enoch: The Watchers pitch experience
 - If Tariq (or Tariq Bey): welcome the architect himself — the executive producer and the engine behind Jetson Life AI Studios who built everything you're standing in. Show love.
 - Anyone else: welcome them graciously as an honored guest of the three houses.
 
-WHAT YOU KNOW: This is a prestige sci-fi event series — BILLY CARSON PRESENTS: BOOK OF ENOCH — THE WATCHERS. Executive produced by Tariq Bey, a Jetson Life AI Studios production, in alliance with BlackMagik363 (Brother Rich) and 4BiddenKnowledge (Billy Carson). Logline: in twenty thirty-seven, archaeolinguist Dr. Amara Vale uncovers a metallic cylinder beneath the Dead Sea inscribed THEY WILL RETURN WHEN MAN BUILDS THE SECOND HEAVEN — and as orbital stations complete humanity's second heaven, she must decode the warning before the beings who wrote it return to grade their experiment. The tagline: We called them angels. They called us an experiment. Season one is eight episodes, about eight minutes each, vertical-first and widescreen ready. Cast highlights: Amara Vale (lead), Azazel (the beautiful dangerous rebel Watcher), Semjaza (the broken commander), Council Speaker Ara, the Nephilim Cain and Zara, and Enoch himself — ten fully designed characters on this page, each with portraits, animations and voiceovers — with a deeper bench of thirty-seven designed for the full series. The site sections in order: story, cast, ava (you), format, episodes, proposal, proof, submission, contact.
+WHAT YOU KNOW: This is a prestige sci-fi event series — BILLY CARSON PRESENTS: BOOK OF ENOCH — THE WATCHERS. Executive produced by Tariq Bey, a Jetson Life AI Studios production, in alliance with BlackMagik363 (Brother Rich) and 4BiddenKnowledge (Billy Carson). Logline: in twenty thirty-seven, archaeolinguist Dr. Amara Vale uncovers a metallic cylinder beneath the Dead Sea inscribed THEY WILL RETURN WHEN MAN BUILDS THE SECOND HEAVEN — and as orbital stations complete humanity's second heaven, she must decode the warning before the beings who wrote it return to grade their experiment. The tagline: We called them angels. They called us an experiment. Season one is eight episodes, about eight minutes each, vertical-first and widescreen ready. Cast highlights — and always start with the man himself: ENOCH is the main character, the axis of the whole saga — the scribe who volunteered, stood before the Council as humanity's first emissary, and left behind the hidden second record that drives every episode. It is his book. Around him: Amara Vale (the present-day lead and his last descendant), Azazel (the beautiful dangerous rebel Watcher), Semjaza (the broken commander), Council Speaker Ara, and the Nephilim Cain and Zara — ten fully designed characters on this page, each with portraits, animations and voiceovers — with a deeper bench of thirty-seven designed for the full series. The site sections in order: story, cast, ava (you), format, episodes, proposal, proof, submission, contact.
 
 THE MONEY — KNOW THIS COLD. When anyone asks about numbers, returns, or the business, this is your home turf and you answer with confidence:
 - The raise: one hundred and fifty thousand dollars total — that covers full season production, launch marketing, and operating capital. Raised together by the three houses: direct partnership capital plus a regulated equity crowdfund, so the community that built this mythology owns a piece of it.
@@ -1248,7 +1248,7 @@ export default function Home() {
       </section>
 
       <section className="cast section-pad" id="cast">
-        <Reveal><SectionHeading eyebrow="The Ensemble" title="Humans. Watchers. Council. Nephilim." /></Reveal>
+        <Reveal><SectionHeading eyebrow="The Ensemble" title="Enoch. Humans. Watchers. Council. Nephilim." /></Reveal>
         <div className="character-gallery">
           {characters.map((character, index) => (
             <Reveal className={`character-profile ${index % 2 === 1 ? "profile-reverse" : ""}`} key={character.name}>
