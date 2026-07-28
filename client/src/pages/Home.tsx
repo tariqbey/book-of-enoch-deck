@@ -70,7 +70,7 @@ const characters: Character[] = [
     description:
       "Doctor Amara Vale built her career tearing down sensational claims about ancient civilizations — the same claims that destroyed her father. Brilliant, disciplined, and relentlessly skeptical, she trusts only what the evidence can prove. But beneath the Dead Sea, the evidence has started proving the impossible. And the deepest secret isn't written on the artifact. It's written in her blood.",
     journey: "Skeptic → investigator → hunted witness → descendant → humanity's representative.",
-    audio: "/voiceovers/amara.mp3",
+    audio: "https://cdn.jsdelivr.net/gh/tariqbey/book-of-enoch-deck@main/client/public/voiceovers/amara.mp3",
     image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_155427_639c4247-3fcb-44ec-a1f5-66b5bd39fd54_min.webp",
     video: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_171555_3db819e6-2180-4b64-815d-295910926791.mp4",
   },
@@ -84,7 +84,7 @@ const characters: Character[] = [
     description:
       "Doctor Elias Vale was once one of America's most promising scholars of ancient texts — until his obsession with the Book of Enoch cost him his career, his family, and finally his freedom. The world believes he vanished twenty-five years ago. The truth is worse. He found real evidence. And he has been running from governments and something far older ever since.",
     journey: "Missing father → conspiracy figure → mentor → suspected traitor.",
-    audio: "/voiceovers/elias.mp3",
+    audio: "https://cdn.jsdelivr.net/gh/tariqbey/book-of-enoch-deck@main/client/public/voiceovers/elias.mp3",
     image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_155431_45940a8f-576e-4c8c-bee4-2f6a2d7097bb_min.webp",
     video: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_171527_dbf99eb6-6964-4763-8cf7-21e674e23bae.mp4",
   },
@@ -98,7 +98,7 @@ const characters: Character[] = [
     description:
       "Azazel is the leader of the ancient rebellion — elegant, calm, and terrifyingly intelligent. He has watched humanity rise from mud to metropolis, and he genuinely loves us. That is the problem. He believes no creator has the right to keep an intelligent species ignorant, and he gave mankind forbidden knowledge to prove it. Everything he loves, he improves. Whether it survives the improvement is another matter.",
     journey: "Myth → mystery → teacher → temptation → the final choice.",
-    audio: "/voiceovers/azazel.mp3",
+    audio: "https://cdn.jsdelivr.net/gh/tariqbey/book-of-enoch-deck@main/client/public/voiceovers/azazel.mp3",
     image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_155434_accd2c27-6543-4b63-9b9a-3a6d65b5ae5a_min.webp",
     video: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_171530_a3624f2f-f5d6-4709-be67-1af3357f233a.mp4",
   },
@@ -112,7 +112,7 @@ const characters: Character[] = [
     description:
       "Semjaza commanded the two hundred Watchers who descended in defiance of the Council. Where Azazel made peace with the rebellion, Semjaza carries its guilt like a second skeleton. He remembers the Nephilim. He remembers the screaming. He remembers the Flood. Imprisoned beneath the earth for thousands of years, he has one warning for anyone who will listen: do not let Azazel love you.",
     journey: "Imprisoned legend → warning → reluctant ally → redemption.",
-    audio: "/voiceovers/semjaza.mp3",
+    audio: "https://cdn.jsdelivr.net/gh/tariqbey/book-of-enoch-deck@main/client/public/voiceovers/semjaza.mp3",
     image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_155437_3612e698-66e2-47bf-a1a2-1062e366e5cc_min.webp",
     video: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_171557_180d1de0-9575-4892-b0c2-dbe5fd1eab48.mp4",
   },
@@ -126,7 +126,7 @@ const characters: Character[] = [
     description:
       "Malik Cross spent his career in the shadows of special operations — until strange deaths at a Dead Sea excavation pulled him into a war older than nations. He is Amara Vale's protector, never her babysitter; she saves him as often as he saves her. And ten years ago, on a classified mission he has never spoken of, Malik saw an object that should not exist. Now it's awake.",
     journey: "Hired gun → believer → Amara's anchor → the classified secret surfaces.",
-    audio: "/voiceovers/malik.mp3",
+    audio: "https://cdn.jsdelivr.net/gh/tariqbey/book-of-enoch-deck@main/client/public/voiceovers/malik.mp3",
     image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_155439_4ab09ed8-0fc2-4b22-9b03-97d75b16dc8d_min.webp",
     video: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_171600_acf022aa-61ed-45bf-9512-a90324509804.mp4",
   },
@@ -140,7 +140,7 @@ const characters: Character[] = [
     description:
       "Doctor Nia Brooks is the astrophysicist who saw it first — the objects approaching Earth that moved with intention instead of physics. Warm, quick, and fearless with data, she is the energy inside the team and the first to say out loud what everyone is thinking. Something is coming. It has been coming for a very long time. And it is exactly on schedule.",
     journey: "Discovery → alarm → the countdown → mission control for first contact.",
-    audio: "/voiceovers/nia.mp3",
+    audio: "https://cdn.jsdelivr.net/gh/tariqbey/book-of-enoch-deck@main/client/public/voiceovers/nia.mp3",
     image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_155506_ea4dbafb-3d13-40c6-8448-8cb878c253ef_min.webp",
     video: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_171602_1a1c542c-cc16-41ae-b43b-97b3184a0043.mp4",
   },
@@ -154,7 +154,7 @@ const characters: Character[] = [
     description:
       "Isaiah Reed is nineteen years old and already one of the most dangerous minds on the internet. When ancient geometric code started appearing inside modern networks, every agency on Earth missed it. Isaiah didn't. Now the kid with the twists and the oversized hoodie holds a six-thousand-year-old cipher — and the people who buried it are coming to take it back.",
     journey: "Curiosity → obsession → hunted → the key to the second record.",
-    audio: "/voiceovers/isaiah.mp3",
+    audio: "https://cdn.jsdelivr.net/gh/tariqbey/book-of-enoch-deck@main/client/public/voiceovers/isaiah.mp3",
     image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_155509_861a38a2-6d64-40ca-9764-c9b72efe29c3_min.webp",
     video: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_171543_71df3710-505b-4640-a569-e97683159e8b.mp4",
   },
@@ -168,7 +168,7 @@ const characters: Character[] = [
     description:
       "Commander Marcus Vaughn has spent thirty years deciding what humanity is allowed to know. As national security director, he guards a vault of recovered technology that rewrites history — and he will protect that secret at any cost. He is not a villain. He is something more complicated: a man who believes the truth is a weapon, and the public is not ready to be armed.",
     journey: "Obstacle → uneasy ally → the vault opens → the cost of secrets.",
-    audio: "/voiceovers/vaughn.mp3",
+    audio: "https://cdn.jsdelivr.net/gh/tariqbey/book-of-enoch-deck@main/client/public/voiceovers/vaughn.mp3",
     image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_155512_11c5f306-ab05-4d6a-9f92-ce68e75641ac_min.webp",
     video: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_171604_b5d1e148-2509-4542-842a-07ea0cc7b158.mp4",
   },
@@ -182,7 +182,7 @@ const characters: Character[] = [
     description:
       "Doctor Sofia Alvarez is the geneticist who sequenced Amara Vale's blood and found a sentence no human genome should contain. Elegant, precise, and quietly fearless, she stands at the exact point where science stops explaining and starts confessing. The sample in her hand is impossible. The implications are worse. And she cannot unsee what she has read.",
     journey: "The impossible sequence → the Nephilim gene → the truth about Amara.",
-    audio: "/voiceovers/sofia.mp3",
+    audio: "https://cdn.jsdelivr.net/gh/tariqbey/book-of-enoch-deck@main/client/public/voiceovers/sofia.mp3",
     image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_155514_12902ac1-a0cf-4918-8348-b61e30bd6707_min.webp",
     video: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_171613_8ef085bf-af5f-4f4e-9adf-4adbb34331db.mp4",
   },
@@ -196,7 +196,7 @@ const characters: Character[] = [
     description:
       "Father Mateo Rivera is a priest with a scholar's mind and a believer's heart — and both are on trial. Fluent in the dead languages of scripture, he was summoned to authenticate a manuscript that should not exist. Every page he turns pulls him further from the Church that raised him and closer to a truth the Vatican buried. His faith is not breaking. It is transforming.",
     journey: "Authentication → crisis → transformation → a new theology.",
-    audio: "/voiceovers/mateo.mp3",
+    audio: "https://cdn.jsdelivr.net/gh/tariqbey/book-of-enoch-deck@main/client/public/voiceovers/mateo.mp3",
     image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_155517_867dc7b1-1921-426e-a4cd-d8f53f4f8cfe_min.webp",
     video: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_171617_85c7e3b9-9f3d-4018-b49e-96ad54a4d429.mp4",
   },
@@ -210,7 +210,7 @@ const characters: Character[] = [
     description:
       "Agent Elena Vasquez moves through the intelligence world like smoke — composed, unreadable, and loyal to an agenda no one has fully seen. She knows where the bodies are buried because she filed the paperwork. Every faction believes she works for them. Every faction is wrong. In a story full of ancient monsters, Elena Vasquez is the most dangerous kind: entirely human.",
     journey: "Watcher of watchers → triple agent → the allegiance reveal.",
-    audio: "/voiceovers/elena.mp3",
+    audio: "https://cdn.jsdelivr.net/gh/tariqbey/book-of-enoch-deck@main/client/public/voiceovers/elena.mp3",
     image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_155519_bf945b04-4fc3-4ab6-a9e7-d22587a9e85a_min.webp",
     video: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_171621_c84a5c31-409a-4cb2-a68f-8f92fb7b33ee.mp4",
   },
@@ -224,7 +224,7 @@ const characters: Character[] = [
     description:
       "Sariel is the Watcher of the Moon — master of lunar and gravitational science, beautiful and unsettling as deep water. Where Azazel preaches freedom, Sariel believes civilization must be managed like an orbit: precisely, coldly, forever. Stones float in his presence. So do people, if he wishes it. He does not hate humanity. He simply believes we were never meant to steer.",
     journey: "Observer → adversary → the case for control → the Council's fracture.",
-    audio: "/voiceovers/sariel.mp3",
+    audio: "https://cdn.jsdelivr.net/gh/tariqbey/book-of-enoch-deck@main/client/public/voiceovers/sariel.mp3",
     image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_155521_9d00f870-e077-495a-a54c-bdb5d8193248_min.webp",
     video: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_171625_ef1e18a0-74ac-4d15-bf34-85636f37a420.mp4",
   },
@@ -238,7 +238,7 @@ const characters: Character[] = [
     description:
       "Maya Vale is a retired federal judge, a matriarch of iron composure, and the keeper of the family's deepest wound. When her husband Elias vanished, she held her daughter together and buried her questions. But there is an envelope hidden in her elegant home — classified, unopened for years — and inside it is the truth about the night the men came. She has always known more than she says.",
     journey: "Matriarch → witness → the night the men came → the envelope opens.",
-    audio: "/voiceovers/maya.mp3",
+    audio: "https://cdn.jsdelivr.net/gh/tariqbey/book-of-enoch-deck@main/client/public/voiceovers/maya.mp3",
     image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_155530_7043b02f-47ff-458e-bc57-e11b2df84bb5_min.webp",
     video: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_171629_14c14257-3835-4887-8767-76a3d0376dbc.mp4",
   },
@@ -252,7 +252,7 @@ const characters: Character[] = [
     description:
       "Detective Darius Cole works homicide the old way: evidence, witnesses, shoe leather. He does not believe in ancient astronauts. But the bodies keep turning up marked with symbols older than writing, and the lights in the sky over his crime scenes do not behave like aircraft. Cole is the skeptic the audience trusts — which makes his slow, reluctant conversion the most frightening testimony of all.",
     journey: "Skeptic → evidence → conversion → the human witness.",
-    audio: "/voiceovers/cole.mp3",
+    audio: "https://cdn.jsdelivr.net/gh/tariqbey/book-of-enoch-deck@main/client/public/voiceovers/cole.mp3",
     image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_155533_f8018956-6ee2-4c1f-a994-7d7072cf89a5_min.webp",
     video: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_171633_5402d103-3951-459d-8225-09055ffbecb2.mp4",
   },
@@ -266,7 +266,7 @@ const characters: Character[] = [
     description:
       "Doctor Adrian Kessler is a billionaire physicist who believes the Watchers' technology is simply an inheritance waiting to be claimed — by him. Polished, brilliant, and quietly ruthless, he has spent a fortune collecting what governments hide. He does not want to worship the gods of the ancient world. He wants to replace them. History is full of men like Kessler. That is how the Flood happened.",
     journey: "Collector → accelerant → the second Babel → the fall.",
-    audio: "/voiceovers/kessler.mp3",
+    audio: "https://cdn.jsdelivr.net/gh/tariqbey/book-of-enoch-deck@main/client/public/voiceovers/kessler.mp3",
     image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_155536_4961190f-b924-4c9e-b8be-f01461206941_min.webp",
     video: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_171636_5eab117c-03ab-4cde-8679-5c0a26468606.mp4",
   },
@@ -280,7 +280,7 @@ const characters: Character[] = [
     description:
       "Doctor Evelyn Hart is the grande dame of biblical archaeology — Amara Vale's mentor, champion, and the person she trusts most in the world. That trust is misplaced. For decades, Hart has quietly fed her discoveries to people whose names appear in no university directory. She loves Amara like a daughter. She has also been betraying her from the beginning. Both things are true.",
     journey: "Mentor → mole → exposure → the price of both loves.",
-    audio: "/voiceovers/hart.mp3",
+    audio: "https://cdn.jsdelivr.net/gh/tariqbey/book-of-enoch-deck@main/client/public/voiceovers/hart.mp3",
     image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_155538_442a27e4-47c7-467a-b685-7bbbe9dc2827_min.webp",
     video: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_171638_0ade0c52-f3a5-4b5d-891e-4f15888014ca.mp4",
   },
@@ -294,7 +294,7 @@ const characters: Character[] = [
     description:
       "Cain is eight feet of living history — a first-generation Nephilim who survived the Flood that was engineered to erase his kind. He has worn a thousand names across a hundred civilizations, and carries scars older than the pyramids. Ancient, soulful, and terrifying, he has spent millennia protecting humanity from both of his bloodlines. He is not a monster. He is what mercy looks like after four thousand years.",
     journey: "Legend → guardian → the bridge between bloodlines.",
-    audio: "/voiceovers/cain.mp3",
+    audio: "https://cdn.jsdelivr.net/gh/tariqbey/book-of-enoch-deck@main/client/public/voiceovers/cain.mp3",
     image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_155541_209f7066-5a89-4514-aa7c-2b3423aa619c_min.webp",
     video: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_171650_9b472b37-3c27-42ea-9907-3294fee226b9.mp4",
   },
@@ -308,7 +308,7 @@ const characters: Character[] = [
     description:
       "Zara looks like any brilliant young woman in the city — until something moves her, and gold geometry flares behind her eyes. She is Nephilim, centuries old, hiding in plain sight among the species that would dissect her. Guarded, sharp, and achingly alone, she has survived by trusting no one. The Watchers' return will force her to choose a side. Both sides think she already has.",
     journey: "Ghost in the city → reluctant ally → the choosing of sides.",
-    audio: "/voiceovers/zara.mp3",
+    audio: "https://cdn.jsdelivr.net/gh/tariqbey/book-of-enoch-deck@main/client/public/voiceovers/zara.mp3",
     image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_155544_cf35519d-6b6c-4e61-958c-954490ea17c9_min.webp",
     video: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_171653_b103cd7c-fd70-4703-81b0-2d9a7c0b9aca.mp4",
   },
@@ -322,7 +322,7 @@ const characters: Character[] = [
     description:
       "Enoch was not abducted. He volunteered. A scribe in an age of warlords, he walked into the ship the ancients called heaven and stood before the Council as humanity's first emissary. He saw the Earth as a sphere, received the knowledge of the stars, and came back changed. He wrote two records of what he saw. One became the Book of Enoch. The other was hidden — and it is a countdown.",
     journey: "The scribe → the ascension → the two records → the countdown.",
-    audio: "/voiceovers/enoch.mp3",
+    audio: "https://cdn.jsdelivr.net/gh/tariqbey/book-of-enoch-deck@main/client/public/voiceovers/enoch.mp3",
     image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_155548_2306b63f-72dc-43fb-9f17-8b4c699470d6_min.webp",
     video: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_171656_40f5a490-8e6a-4549-8b42-461cdf90b5ec.mp4",
   },
@@ -336,7 +336,7 @@ const characters: Character[] = [
     description:
       "Ara is the Supreme Speaker of the Council — the voice of a civilization so old that stars have died waiting for it to change its mind. Galaxies literally turn behind her eyes. She does not threaten, because she has never needed to. When Ara inclines her head, worlds are weighed. Humanity's file is open on her desk. The Flood was her signature. The question is whether she will sign again.",
     journey: "The judgment of Earth → the second Flood vote → the hearing.",
-    audio: "/voiceovers/ara.mp3",
+    audio: "https://cdn.jsdelivr.net/gh/tariqbey/book-of-enoch-deck@main/client/public/voiceovers/ara.mp3",
     image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_155550_a901f6c8-d3cf-44f3-8ef4-6a5c6c773384_min.webp",
     video: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_171700_453d7c88-1bc2-4d4e-aa3a-9017c65e37de.mp4",
   },
@@ -350,7 +350,7 @@ const characters: Character[] = [
     description:
       "Araqiel is the Watcher of the deep earth — the one who taught humanity to read stone, strata, and the slow language of tectonic plates. Fault lines answer to her touch. Mountains remember her name. Powerful and elemental, she has spent millennia listening to the planet itself — and lately, the planet has been screaming.",
     journey: "The planet is screaming — and she knows why.",
-    audio: "/voiceovers/araqiel.mp3",
+    audio: "https://cdn.jsdelivr.net/gh/tariqbey/book-of-enoch-deck@main/client/public/voiceovers/araqiel.mp3",
     image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_161027_eb02b64f-59bd-4232-8d08-37eea6b4ec0e_min.webp",
     video: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_171703_fcb00181-1592-4e72-98ed-45715d3a911f.mp4",
   },
@@ -364,7 +364,7 @@ const characters: Character[] = [
     description:
       "Baraqel is the celestial navigator — the Watcher who taught the first astronomers that the sky was a map, not a ceiling. Star systems orbit his fingertips like obedient birds. Elegant and enigmatic, he charted the paths between worlds before humanity had charted its own coastlines. If the Watchers are returning, it is Baraqel who plotted the course.",
     journey: "He charted the return before we charted our coasts.",
-    audio: "/voiceovers/baraqel.mp3",
+    audio: "https://cdn.jsdelivr.net/gh/tariqbey/book-of-enoch-deck@main/client/public/voiceovers/baraqel.mp3",
     image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_161030_16bb74e3-8982-434f-a0eb-250da3f01f24_min.webp",
     video: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_171708_d214c2e8-092e-41bb-8d6a-db5f96be7fb4.mp4",
   },
@@ -378,7 +378,7 @@ const characters: Character[] = [
     description:
       "Kokabel is the keeper of constellations — the cosmic cartographer who mapped a thousand inhabited worlds and gave humanity its first star names. Within his three-dimensional atlas, every point of light is a civilization, a history, a fate. He watches the heavens the way other beings watch children: with patience, with tenderness, and with an archivist's terrible knowledge of how most stories end.",
     journey: "A thousand worlds in his atlas — Earth is one entry.",
-    audio: "/voiceovers/kokabel.mp3",
+    audio: "https://cdn.jsdelivr.net/gh/tariqbey/book-of-enoch-deck@main/client/public/voiceovers/kokabel.mp3",
     image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_161033_e19a589f-da32-4179-99be-51da570e6723_min.webp",
     video: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_171711_238d3d5e-47e6-4ce6-b90f-9b57d38f60fe.mp4",
   },
@@ -392,7 +392,7 @@ const characters: Character[] = [
     description:
       "Shamsiel is the master of stellar energy — the Watcher who holds the physics of the Sun in his open hand. Solar plasma obeys him like a trained falcon. He taught the ancients to read solar cycles and fear coronal storms, and his knowledge could power a civilization or cremate one. He is majesty and menace in equal measure — a scientist whose laboratory is a star.",
     journey: "His laboratory is a star; his lesson is restraint.",
-    audio: "/voiceovers/shamsiel.mp3",
+    audio: "https://cdn.jsdelivr.net/gh/tariqbey/book-of-enoch-deck@main/client/public/voiceovers/shamsiel.mp3",
     image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_161036_8894b18e-0287-4ab8-979b-27ea75aea2ac_min.webp",
     video: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_171714_57f59431-0676-4ded-9e53-ff85881ca1f0.mp4",
   },
@@ -406,7 +406,7 @@ const characters: Character[] = [
     description:
       "Armaros is the mistress of resonance — the Watcher who understood that reality itself is a frequency, and taught the first humans which notes unmake enchantments. Sound bends light in her presence. Objects rise when she speaks. Brilliant, mysterious, and dangerous, she is the reason ancient temples were built to sing — and the reason some doors should never be given a voice.",
     journey: "Reality is a note — she taught the first humans to sing it.",
-    audio: "/voiceovers/armaros.mp3",
+    audio: "https://cdn.jsdelivr.net/gh/tariqbey/book-of-enoch-deck@main/client/public/voiceovers/armaros.mp3",
     image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_161042_74d53387-3113-4a9b-aa16-065a82d4d051_min.webp",
     video: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_171726_eedc00ae-ce68-4e0e-afb8-e534c1b3ecf2.mp4",
   },
@@ -420,7 +420,7 @@ const characters: Character[] = [
     description:
       "Ezeqel is the atmospheric scientist of the Watchers — the being who taught humanity to read clouds, pressure, and the violence of coming storms. From his orbital station he sculpts weather the way sculptors work clay. Lightning bends into geometry around him. The ancients called it divine wrath. Ezeqel calls it Tuesday.",
     journey: "The ancients called it wrath. He calls it engineering.",
-    audio: "/voiceovers/ezeqel.mp3",
+    audio: "https://cdn.jsdelivr.net/gh/tariqbey/book-of-enoch-deck@main/client/public/voiceovers/ezeqel.mp3",
     image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_161052_70395a9e-2e2a-402e-8011-35b22e54f870_min.webp",
     video: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_171730_4309922d-bbce-4020-9792-d52d8610db47.mp4",
   },
@@ -434,7 +434,7 @@ const characters: Character[] = [
     description:
       "Gadreel is the weapons architect — the Watcher who taught men to make swords, and with them, war. He is not a demon and refuses the title. He is worse: a disciplined, unemotional engineer who optimized killing the way others optimize harvests. Every blade in history descends from his first lesson. He has had four thousand years to consider whether he regrets it. He is still calculating.",
     journey: "Every blade in history descends from his first lesson.",
-    audio: "/voiceovers/gadreel.mp3",
+    audio: "https://cdn.jsdelivr.net/gh/tariqbey/book-of-enoch-deck@main/client/public/voiceovers/gadreel.mp3",
     image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_161055_d57cfa37-77af-4e30-b77b-f416d71ca559_min.webp",
     video: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_171733_8a8ef643-5bb8-40b4-be49-a1c044db0fa1.mp4",
   },
@@ -448,7 +448,7 @@ const characters: Character[] = [
     description:
       "Penemue is the keeper of language — the Watcher who gave humanity ink, paper, and the dangerous gift of writing things down. The scriptures call it his great sin: he taught mortals to make knowledge permanent. Manuscripts from a thousand civilizations orbit him like moons. Serene and brilliant, he is the memory of the world — and memory, he will tell you, is the most subversive technology ever invented.",
     journey: "He made knowledge permanent — and was punished for it.",
-    audio: "/voiceovers/penemue.mp3",
+    audio: "https://cdn.jsdelivr.net/gh/tariqbey/book-of-enoch-deck@main/client/public/voiceovers/penemue.mp3",
     image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_161058_79024beb-7c75-4e02-91f0-eb375ffe89c3_min.webp",
     video: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_171737_caca3510-803f-479b-81e0-ab603ff4229f.mp4",
   },
@@ -462,7 +462,7 @@ const characters: Character[] = [
     description:
       "Kasdeja is the genetic engineer of the Watchers — the brilliant, morally unreadable scientist whose hands helped shape the Nephilim. DNA coils through her amber eyes like script. She sees biology as language and evolution as a first draft badly in need of editing. The hybrids were her masterpiece and her crime. She has never decided which word she prefers.",
     journey: "Her masterpiece and her crime share a name: Nephilim.",
-    audio: "/voiceovers/kasdeja.mp3",
+    audio: "https://cdn.jsdelivr.net/gh/tariqbey/book-of-enoch-deck@main/client/public/voiceovers/kasdeja.mp3",
     image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_161102_5f615622-d6c6-4ab4-bddf-0d6cb1f7f4a5_min.webp",
     video: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_171741_854aa80a-c0d2-40d6-85c4-c12782efbb60.mp4",
   },
@@ -476,7 +476,7 @@ const characters: Character[] = [
     description:
       "Oren is the Council's strategist — an ancient intelligence who evaluates entire civilizations the way accountants evaluate ledgers. Probability streams across his eyes in silent cascades. He has recommended the preservation of a thousand worlds, and the extinction of others, with the same unhurried calm. Humanity's projection is on his display now. The number is not encouraging.",
     journey: "Civilizations are numbers; Earth's number is not encouraging.",
-    audio: "/voiceovers/oren.mp3",
+    audio: "https://cdn.jsdelivr.net/gh/tariqbey/book-of-enoch-deck@main/client/public/voiceovers/oren.mp3",
     image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_161107_3d0c7503-dd7b-42b5-a2c8-a8e844673087_min.webp",
     video: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_171743_d5d15d6b-61fa-496d-9b7f-251ddd4be30c.mp4",
   },
@@ -490,7 +490,7 @@ const characters: Character[] = [
     description:
       "Nahara is the Council's preserver of life — the conscience of a civilization that has outlived its own myths. Holographic creatures from a thousand biospheres drift around her like grateful ghosts. Where Oren sees ledgers, Nahara sees lineages; where the Council sees an experiment, she sees children. When the vote on Earth comes, hers may be the only hand raised in our defense.",
     journey: "When the vote comes, hers may be the only hand raised for us.",
-    audio: "/voiceovers/nahara.mp3",
+    audio: "https://cdn.jsdelivr.net/gh/tariqbey/book-of-enoch-deck@main/client/public/voiceovers/nahara.mp3",
     image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_161110_1b577562-b6fc-4313-8aba-3cc8c9bffd80_min.webp",
     video: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_171756_dc870422-0a51-46de-bea5-e86cb26e1a3b.mp4",
   },
@@ -504,7 +504,7 @@ const characters: Character[] = [
     description:
       "Tevan is the master of temporal probability — the Council member whose sight the ancients mistook for prophecy. Around him float ten thousand possible Earths, branching and dying like sparks. He has watched our futures flicker out one by one with perfect professional detachment. Lately, something has changed. For the first time in an eon, Tevan is uncertain. It should terrify you that this excites him.",
     journey: "For the first time in an eon — he is uncertain.",
-    audio: "/voiceovers/tevan.mp3",
+    audio: "https://cdn.jsdelivr.net/gh/tariqbey/book-of-enoch-deck@main/client/public/voiceovers/tevan.mp3",
     image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_161113_6b5372b1-eb8e-46bc-94a1-cc39291a4722_min.webp",
     video: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_171758_b5da75cf-3573-4056-b0bd-0b3d0951b59b.mp4",
   },
@@ -518,7 +518,7 @@ const characters: Character[] = [
     description:
       "Ishara is the Council's Judge — the authority who sentenced the two hundred Watchers to the abyss. Statuesque and absolute, she presides over a tribunal suspended among the stars, where geometric law replaces mercy. She judged the Watchers once and does not regret it. Now Earth itself approaches her docket. Her verdicts are not cruel. They are simply final.",
     journey: "She sentenced the Watchers. Earth approaches her docket.",
-    audio: "/voiceovers/ishara.mp3",
+    audio: "https://cdn.jsdelivr.net/gh/tariqbey/book-of-enoch-deck@main/client/public/voiceovers/ishara.mp3",
     image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_161124_c5db0aa1-a27b-4dac-8a86-854310301aca_min.webp",
     video: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_171800_2377f14c-8439-492e-889c-9caecaf4bb14.mp4",
   },
@@ -532,7 +532,7 @@ const characters: Character[] = [
     description:
       "Solon is the planetary architect — a being so old that continents are his rough drafts. Miniature worlds turn inside his pale eyes. He engineered oceans before humanity engineered fire, and he regards good and evil the way a mason regards weather: real, but irrelevant to the work. If the Council orders a reset, it is Solon who will draw the new map.",
     journey: "If the reset comes, he draws the new map.",
-    audio: "/voiceovers/solon.mp3",
+    audio: "https://cdn.jsdelivr.net/gh/tariqbey/book-of-enoch-deck@main/client/public/voiceovers/solon.mp3",
     image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_161127_d6311244-89ec-40bf-a5e0-350f99709250_min.webp",
     video: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_171803_a561e155-7cf1-48e1-9923-a6f93571f49f.mp4",
   },
@@ -546,7 +546,7 @@ const characters: Character[] = [
     description:
       "Amenara is the Keeper of Memory — the Council's living archive, in whose eyes every moment of recorded history still plays. Egypt rising. Sumer writing. The Flood closing over the world like a hand. She forgets nothing, forgives rarely, and testifies without mercy. When humanity's case is heard, Amenara will not argue for us or against us. She will simply show the Council everything we have done.",
     journey: "She will simply show the Council everything we have done.",
-    audio: "/voiceovers/amenara.mp3",
+    audio: "https://cdn.jsdelivr.net/gh/tariqbey/book-of-enoch-deck@main/client/public/voiceovers/amenara.mp3",
     image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_161129_10ffdee8-123e-4702-b35d-68d1b5d6872e_min.webp",
     video: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_171807_e87503dd-e07c-4713-a9cd-9d73fdc05dd9.mp4",
   },
@@ -560,7 +560,7 @@ const characters: Character[] = [
     description:
       "Kael is the Council's Enforcer — and the reason the Council has never needed an army. He carries no weapons, because he is one. Seamless black armor, perfect stillness, and a geometric energy field that unfolds behind him like the wings of an equation. The Watchers rebelled once. Kael is the reason it was once. When he takes a step toward you, the universe has already ruled.",
     journey: "He carries no weapons, because he is one.",
-    audio: "/voiceovers/kael.mp3",
+    audio: "https://cdn.jsdelivr.net/gh/tariqbey/book-of-enoch-deck@main/client/public/voiceovers/kael.mp3",
     image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_161132_2c9aecc9-c850-4895-b992-f962e8892421_min.webp",
     video: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_171810_44a636d7-8779-4fb4-b5a3-7b1bfc21f66a.mp4",
   },
@@ -574,7 +574,7 @@ const characters: Character[] = [
     description:
       "The Goliath is a third-generation Nephilim — eleven feet of engineered tragedy, the truth behind the legend a shepherd boy's slingshot made famous. Bred for war in a prehistoric genetic experiment, he outlived his makers, his purpose, and his kind. He is not a beast. Behind the amber eyes is a mind — ancient, intelligent, and unbearably alone in a world built three sizes too small.",
     journey: "Eleven feet of engineered tragedy — and a mind.",
-    audio: "/voiceovers/goliath.mp3",
+    audio: "https://cdn.jsdelivr.net/gh/tariqbey/book-of-enoch-deck@main/client/public/voiceovers/goliath.mp3",
     image: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_161143_73bf172e-2e30-4de7-91a3-fca8ba653a75_min.webp",
     video: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_171814_a1791569-36d9-429c-95fe-8d8d86015810.mp4",
   },
