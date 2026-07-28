@@ -25,16 +25,16 @@ const DECK = {
   titleEm: "The Watchers",
   subtitle: "Ancient Scripture. First Contact. One Warning.",
   tagline: "We called them angels. They called us an experiment.",
-  credit: "Inspired by the Book of Enoch, the Epic of Gilgamesh & ancient Mesopotamian texts",
+  credit: "Executive Produced by Tariq Bey",
   passcode: "2077",
-  producer: "Executive Producer Tariq Bey",
-  presents: "Jetson Life Studios Presents",
+  producer: "Billy Carson Presents",
+  presents: "A Jetson Life AI Studios Production",
   copyright: "\u00a9 2026 Jetson Life Studios. All rights reserved.",
 };
 
 // Media — leave "" to show a placeholder. Swap in Vercel Blob URLs when ready.
 const MEDIA = {
-  logo: "",        // brand emblem ("" -> placeholder diamond)
+  logo: `${import.meta.env.BASE_URL}logos/jetson-life-logo.png`,
   heroImage: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_182804_51734d47-9bb5-4aab-9ff7-fa2a087f8111_min.webp",
   heroVideo: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_190631_bd68de41-b831-42e0-a0c3-e1e273ca3251.mp4",
   coverVideo: "https://d8j0ntlcm91z4.cloudfront.net/user_30nhHAVr9caSNAdANw2jQj0i0jb/hf_20260728_171555_3db819e6-2180-4b64-815d-295910926791.mp4",
@@ -781,6 +781,25 @@ export default function Home() {
             </div>
           </div>
         )}
+        <div className="studio-logos" aria-label="Studio logos">
+          {[
+            ["jetson-life", "Jetson Life AI Studios"],
+            ["forbidden-knowledge", "Forbidden Knowledge"],
+            ["black-magic", "Black Magic"],
+          ].map(([slug, label]) => (
+            <video
+              key={slug}
+              className="studio-logo"
+              src={`${import.meta.env.BASE_URL}logos/${slug}.mp4`}
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              aria-label={`${label} animated logo`}
+            />
+          ))}
+        </div>
         <div className="producer-banner">
           <img className="producer-logo" src={logoSrc} alt={DECK.presents} />
           <h2 className="producer-title">{DECK.producer}</h2>
@@ -1085,7 +1104,7 @@ export default function Home() {
             </article>
             <article>
               <p className="eyebrow">Executive Producer</p>
-              <h3>{DECK.producer}</h3>
+              <h3>Tariq Bey</h3>
               <p>Creator, executive producer, and rights holder for the Book of Enoch: The Watchers series package.</p>
             </article>
           </div>

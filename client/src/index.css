@@ -702,3 +702,35 @@ footer > a { justify-self: end; display: inline-flex; align-items: center; gap: 
 }
 .theme-player { background: transparent; border-bottom: 0; }
 .theme-player.is-playing { min-height: 300px; }
+
+/* Studio logo stings — borderless, blended into the black */
+.studio-logos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  padding: 26px 0 34px;
+  background: transparent;
+}
+.studio-logo {
+  display: block;
+  width: min(560px, 88vw);
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+  mix-blend-mode: screen;
+  -webkit-mask-image: radial-gradient(ellipse 60% 74% at center, black 55%, transparent 80%);
+  mask-image: radial-gradient(ellipse 60% 74% at center, black 55%, transparent 80%);
+}
+/* Jetson Life logo lockup is 16:9 — let brand marks breathe */
+.brand img { width: 54px; height: auto; object-fit: contain; }
+.producer-logo { aspect-ratio: 16 / 9 !important; }
+.closing-logo { aspect-ratio: 16 / 9; object-fit: contain; }
+/* Blend the black-background Jetson logo into every surface */
+.brand img, .section-stamp img, .closing-logo, .footer-brand img,
+.producer-logo, .vault-brand img, .vault-core img, .hero-mark img {
+  mix-blend-mode: screen;
+}
